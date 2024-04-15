@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to Eat?</title>
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue color */
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #4caf50; /* Green color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            color: #fff; /* White color */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .home-btn {
+            color: #fff; /* White color */
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid #fff; /* White color */
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .home-btn:hover {
+            background-color: #fff; /* White color */
+            color: #4caf50; /* Green color */
+        }
+
+        /* Food */
+        .food {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .restaurant {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        .restaurant-title {
+            color: #4caf50; /* Green color */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-description {
+            margin-bottom: 10px;
+        }
+
+        .restaurant-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-links {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .restaurant-link {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        .restaurant-link:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffd700; /* Yellow color */
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">What to Eat?</h1>
+        <a href="index.html" class="home-btn">Home</a>
+    </header>
+
+    <section class="food">
+        <div class="restaurant">
+            <img src="river.jpg" alt="Restaurant Riverside" class="restaurant-image">
+            <h2 class="restaurant-title">Restaurant Riverside</h2>
+            <p class="restaurant-description">Experience delicious cuisine with a stunning view at Restaurant Riverside.</p>
+            <div class="restaurant-links">
+                <a href="#" class="restaurant-link">Menu</a>
+                <a href="https://www.google.com/maps/place/Restaurant+%26+Bar+%22Riverside%22/@43.6669212,18.971314,17z/data=!3m1!4b1!4m6!3m5!1s0x475861bbabf932b9:0xb0d8c4b8d0db12b3!8m2!3d43.6669173!4d18.9738889!16s%2Fg%2F11nytvmyp9?entry=ttu" 
+                   class="restaurant-link">Google Maps</a>
+                <a href="#" class="restaurant-link">Reservations</a>
+            </div>
+        </div>
+
+        <div class="restaurant">
+            <img src="somun.jpg" alt="Somun" class="restaurant-image">
+            <h2 class="restaurant-title">Somun</h2>
+            <p class="restaurant-description">Indulge in freshly baked somun, a traditional Bosnian bread, at Somun bakery.</p>
+            <div class="restaurant-links">
+                <a href="#" class="restaurant-link">Menu</a>
+                <a href="https://www.google.com/maps/place/Somun/@43.668249,18.9710699,17z/data=!3m1!4b1!4m9!3m8!1s0x47586029b90c4a3b:0xf1568860638aa3ab!5m2!4m1!1i2!8m2!3d43.6682451!4d18.9736448!16s%2Fg%2F11bw6td2fk?entry=ttu" 
+                   class="restaurant-link">Google Maps</a>
+                <a href="#" class="restaurant-link">Reservations</a>
+            </div>
+        </div>
+
+        <!-- Add more restaurants -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Festival of Friendship - Goražde</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+/* Common styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1eaee; /* Light blue background */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-image: url('international.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Title */
+.title {
+    color: #e91e63;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: skew(-10deg);
+}
+
+/* Logo */
+.logo img {
+    max-width: 135px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Sponsor */
+.sponsor img {
+    max-width: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Flags */
+.flags {
+    overflow-x: auto; /* Enable horizontal scrolling for flags */
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flags img {
+    max-width: 40px; /* Reduce flag width for mobile devices */
+    margin: 2px; /* Reduce spacing between flags */
+}
+
+/* Activities, Out, Shopping, Eat, Events, Program */
+.activities,
+.out,
+.shopping,
+.eat,
+.events,
+.program {
+    margin-bottom: 50px;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #ff1493;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: skew(-10deg);
+}
+
+/* Button style */
+.visit-btn,
+.sleep-btn,
+.out-btn,
+.shopping-btn,
+.eat-btn,
+.events-btn,
+.program-btn {
+    background-color: #ff1493;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* Add some space below buttons */
+}
+
+.visit-btn:hover,
+.sleep-btn:hover,
+.out-btn:hover,
+.shopping-btn:hover,
+.eat-btn:hover,
+.events-btn:hover,
+.program-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .flags img {
+        max-width: 40px;
+        margin: 2px;
+    }
+
+    .flags {
+        overflow-x: auto;
+    }
+
+    .visit-images img,
+    .out-images img,
+    .shopping-images img,
+    .eat-images img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+}

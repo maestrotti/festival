@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Festival of Friendship - Goražde</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Common styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1eaee; /* Light blue background */
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-image: url('international.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Title */
+        .title {
+            color: #e91e63;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-10deg);
+        }
+
+        /* Logo */
+        .logo img {
+            max-width: 135px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Sponsor */
+        .sponsor img {
+            max-width: 200px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Flags */
+        .flags {
+            overflow-x: auto; /* Enable horizontal scrolling for flags */
+            padding: 10px 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .flags img {
+            max-width: 40px; /* Reduce flag width for mobile devices */
+            margin: 2px; /* Reduce spacing between flags */
+        }
+
+        /* Activities, Out, Shopping, Eat, Events, Program */
+        .activities,
+        .out,
+        .shopping,
+        .eat,
+        .events,
+        .program {
+            margin-bottom: 50px;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            color: #ff1493;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-10deg);
+        }
+
+        /* Button style */
+        .visit-btn,
+        .sleep-btn,
+        .out-btn,
+        .shopping-btn,
+        .eat-btn,
+        .events-btn,
+        .program-btn {
+            background-color: #ff1493;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Add some space below buttons */
+        }
+
+        .visit-btn:hover,
+        .sleep-btn:hover,
+        .out-btn:hover,
+        .shopping-btn:hover,
+        .eat-btn:hover,
+        .events-btn:hover,
+        .program-btn:hover {
+            background-color: #ff69b4;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .flags img {
+                max-width: 40px;
+                margin: 2px;
+            }
+
+            .flags {
+                overflow-x: auto;
+            }
+
+            .visit-images img,
+            .out-images img,
+            .shopping-images img,
+            .eat-images img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+        }
+
+        /* Additional styling */
+        .visit-images img,
+        .out-images img,
+        .shopping-images img,
+        .eat-images img {
+            width: 100%; /* Ensure all images are full width */
+            max-width: 100%; /* Prevent images from overflowing */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Scale images while maintaining aspect ratio */
+            margin-bottom: 5px; /* Add spacing between images */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">International Festival of Friendship Goražde</h1>
+        <div class="logo">
+            <img src="" alt="City Coat of Arms">
+        </div>
+        <div class="sponsor">
+            <img src="" alt="Main Sponsor" class="main-sponsor">
+        </div>
+    </header>
+
+    <section class="flags">
+        <img src="bosna.png" alt="Flag 1">
+        <img src="france.png" alt="Flag 2">
+        <img src="turska.jpeg" alt="Flag 1">
+        <img src="sved.png" alt="Flag 2">
+        <img src="maced.png" alt="Flag 2">
+        <img src="spain.png" alt="Flag 1">
+        <img src="australia.png" alt="Flag 2">
+        <img src="cro.png" alt="Flag 1">
+        <img src="italy.png" alt="Flag 2">
+        <img src="swiss.png" alt="Flag 1">
+        <img src="srb.jpeg" alt="Flag 2">
+        <img src="austria.png" alt="Flag 1">
+        <img src="crna.png" alt="Flag 2">
+        <img src="gbr.jpeg" alt="Flag 1">
+        <img src="slovenia.png" alt="Flag 2">
+        <img src="germ.png" alt="Flag 1">
+        <img src="usa.png" alt="Flag 2">
+        <!-- Add more flags -->
+    </section>
+
+    <section class="activities">
+        <h2 class="subtitle">What to Visit?</h2>
+        <p1 style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
+            Gorazde, a hero city in eastern Bosnia, the only BiH city on the Drina that managed to defend itself in the last war, and today a true small economic miracle.</br>
+
+            For a long time, this small town flourished as a stop on the trade route that led from Serbia and Montenegro to Sarajevo. The Drina is a favorite place for swimming and rafting, so cafes and restaurants on the banks of the river are always full.</br>
+
+            South of Gorazde is one of the largest medieval cemeteries in the country. It is assumed that there are about 600 medieval tombstones in one cemetery on the hillside.</p1>
+
+        <button class="visit-btn" onclick="location.href='visit.html'">See More</button>
+    </section>
+
+    <section class="out">
+        <h2 class="subtitle">Where to Spend the Night?</h2>
+        <div class="out-images">
+            <a href="link-za-casablanca.html" target="_blank">
+                <img src="casablanca.jpg" alt="Casablanca">
+            </a>
+            <!-- Add more images and links -->
+        </div>
+        <button class="sleep-btn" onclick="location.href='sleep.html'">See More</button>
+    </section>
+
+    <section class="shopping">
+        <h2 class="subtitle">Shopping</h2>
+        <div class="shopping-images">
+            <img src="bingo.png" alt="Shopping 1">
+            <img src="konzum.jpg" alt="Shopping 2">
+            <!-- Add more images -->
+        </div>
+        <button class="shopping-btn" onclick="location.href='shopping.html'">See More</button>
+    </section>
+
+    <section class="eat">
+        <h2 class="subtitle">What to Eat?</h2>
+        <div class="eat-images">
+            <img src="river.jpg" alt="Food 1">
+            <img src="somun.jpg" alt="Food 2">
+            <!-- Add more images -->
+        </div>
+        <button class="eat-btn" onclick="location.href='eat.html'">See More</button>
+    </section>
+
+    <section class="events">
+        <h2 class="subtitle">Events</h2>
+        <div class="event-description">
+            <img src="regata.jpg" alt="Regata" style="max-width: 200px; max-height: 150px;">
+            <h3 style="text-transform: uppercase;">REGATA</h3>
+        </div>
+        <button class="events-btn" onclick="location.href='events.html'">See More</button>
+    </section>
+
+    <section class="program">
+        <h2 class="subtitle">Festival Program</h2>
+        <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="program-btn" target="_blank">Download Program</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Festival of Friendship - Goražde</p>
+    </footer>
+</body>
+
+</html>

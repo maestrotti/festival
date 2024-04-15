@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places to Visit - Festival of Friendship</title>
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue color */
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #e91e63; /* Pink color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            color: #fff; /* White color */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .home-btn {
+            color: #fff; /* White color */
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid #fff; /* White color */
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .home-btn:hover {
+            background-color: #fff; /* White color */
+            color: #e91e63; /* Pink color */
+        }
+
+        /* Places */
+        .places {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .place {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        .place-title {
+            color: #e91e63; /* Pink color */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .place-description {
+            margin-bottom: 10px;
+        }
+
+        .place-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .place-links {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .place-link {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        .place-link:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffd700; /* Yellow color */
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Places to Visit</h1>
+        <a href="index.html" class="home-btn">Home</a>
+    </header>
+
+    <section class="places">
+        <div class="place">
+            <img src="behar.jpg" alt="Hotel Behar" class="place-image">
+            <h2 class="place-title">Hotel Behar</h2>
+            <p class="place-description">Hotel Behar is a cozy hotel located in the heart of Goražde. It offers comfortable accommodation and excellent service.</p>
+            <div class="place-links">
+                <a href="#" class="place-link">Website</a>
+                <a href="https://www.google.com/maps/place/Hotel+Behar/@43.6671044,18.9713396,17z/data=!3m1!4b1!4m9!3m8!1s0x475860298375e24b:0x92aa98eb09bfa5b2!5m2!4m1!1i2!8m2!3d43.6671005!4d18.9739145!16s%2Fg%2F12qf66f_q?entry=ttu" 
+                   class="place-link">Google Maps</a>
+                <a href="#" class="place-link">Booking</a>
+            </div>
+        </div>
+
+        <div class="place">
+            <img src="casablanca.jpg" alt="Hotel Casablanca" class="place-image">
+            <h2 class="place-title">Hotel Casablanca</h2>
+            <p class="place-description">Hotel Casablanca offers luxurious accommodation with stunning views of the city. It's the perfect choice for travelers seeking comfort and elegance.</p>
+            <div class="place-links">
+                <a href="#" class="place-link">Website</a>
+                <a href="https://www.google.com/maps/place/HOTEL+Casablanca/@43.6275531,18.9355851,17z/data=!3m1!4b1!4m9!3m8!1s0x4758899d7baf1a63:0x2613fdb75107735b!5m2!4m1!1i2!8m2!3d43.6275492!4d18.93816!16s%2Fg%2F11g0fqhw77?entry=ttu" 
+                   class="place-link">Google Maps</a>
+                <a href="#" class="place-link">Booking</a>
+            </div>
+        </div>
+
+        <!-- Add more places -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Festival of Friendship - Goražde</p>
+    </footer>
+</body>
+
+</html>
