@@ -80,7 +80,8 @@
 
         .outing img {
             width: 100%;
-            height: auto;
+            height: 200px; /* Definišemo istu visinu za sve slike */
+            object-fit: cover;
         }
 
         .outing-name {
@@ -89,6 +90,30 @@
             padding: 10px;
             text-align: center;
             font-weight: bold;
+        }
+
+        /* Dodani stilovi za gumb "Home" i za "Rezervacije" */
+        .home-btn,
+        .reserve-btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .home-btn:hover,
+        .reserve-btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -100,6 +125,8 @@
             <img src="your-logo.png" alt="Your Logo">
         </div>
     </header>
+
+    <button class="home-btn" onclick="location.href='index.html'">Home</button>
 
     <section class="outings">
         <h2 class="subtitle">Cafes</h2>
@@ -137,9 +164,23 @@
         </div>
     </section>
 
+    <button class="reserve-btn" onclick="displayContactInfo()">Reservations</button>
+
     <footer>
         <p>&copy; 2024 - Goražde</p>
     </footer>
+
+    <!-- Skripta za prikaz kontaktnih informacija -->
+    <script>
+        function displayContactInfo() {
+            // Ovde možeš postaviti kontakt informacije koje želiš da prikažeš
+            var phoneNumber = "+1234567890";
+            var email = "info@example.com";
+
+            // Prikazuje kontakt informacije u alert box-u
+            alert("Phone: " + phoneNumber + "\nEmail: " + email);
+        }
+    </script>
 </body>
 
 </html>
