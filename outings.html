@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Outings in Goražde</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Common styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1eaee; /* Light blue background */
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-image: url('international.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Title */
+        .title {
+            color: #e91e63;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-10deg);
+        }
+
+        /* Logo */
+        .logo img {
+            max-width: 135px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Sponsor */
+        .sponsor img {
+            max-width: 200px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Flags */
+        .flags {
+            overflow-x: auto; /* Enable horizontal scrolling for flags */
+            padding: 10px 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .flags img {
+            max-width: 40px; /* Reduce flag width for mobile devices */
+            margin: 2px; /* Reduce spacing between flags */
+        }
+
+        /* Activities, Out, Shopping, Eat, Events, Program */
+        .activities,
+        .out,
+        .shopping,
+        .eat,
+        .events,
+        .program,
+        .outings {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            color: #ff1493;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-10deg);
+        }
+
+        /* Button style */
+        .visit-btn,
+        .sleep-btn,
+        .out-btn,
+        .shopping-btn,
+        .eat-btn,
+        .events-btn,
+        .program-btn,
+        .outings-btn {
+            background-color: #ff1493;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Add some space below buttons */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .visit-btn:hover,
+        .sleep-btn:hover,
+        .out-btn:hover,
+        .shopping-btn:hover,
+        .eat-btn:hover,
+        .events-btn:hover,
+        .program-btn:hover,
+        .outings-btn:hover {
+            background-color: #ff69b4;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .flags img {
+                max-width: 40px;
+                margin: 2px;
+            }
+
+            .flags {
+                overflow-x: auto;
+            }
+
+            .visit-images img,
+            .out-images img,
+            .shopping-images img,
+            .eat-images img,
+            .outing-images img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+        }
+
+        /* Additional styling */
+        .visit-images img,
+        .out-images img,
+        .shopping-images img,
+        .eat-images img,
+        .outing-images img {
+            width: 100%; /* Ensure all images are full width */
+            max-width: 100%; /* Prevent images from overflowing */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Scale images while maintaining aspect ratio */
+            margin-bottom: 5px; /* Add spacing between images */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Outings in Goražde</h1>
+        <div class="logo">
+            <img src="your-logo.png" alt="Your Logo">
+        </div>
+    </header>
+
+    <section class="flags">
+        <img src="bosna.png" alt="Flag 1">
+        <img src="france.png" alt="Flag 2">
+        <img src="turska.jpeg" alt="Flag 1">
+        <img src="sved.png" alt="Flag 2">
+        <img src="maced.png" alt="Flag 2">
+        <img src="spain.png" alt="Flag 1">
+        <img src="cro.png" alt="Flag 1">
+        <img src="italy.png" alt="Flag 2">
+        <img src="swiss.png" alt="Flag 1">
+        <img src="srb.jpeg" alt="Flag 2">
+        <img src="austria.png" alt="Flag 1">
+        <img src="crna.png" alt="Flag 2">
+        <img src="slovenia.png" alt="Flag 2">
+        <img src="germ.png" alt="Flag 1">
+        <img src="usa.png" alt="Flag 2">
+    </section>
+
+    <section class="outings">
+        <h2 class="subtitle">Outings in Goražde</h2>
+        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
+            Experience the lively atmosphere of Goražde with numerous cafes, bars, and clubs offering diverse entertainment and nightlife.
+        </p>
+        <div class="outing-description">
+            <!-- Add outing description -->
+        </div>
+        <button class="outings-btn" onclick="location.href='outings.html'">See More</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Goražde</p>
+    </footer>
+</body>
+
+</html>
