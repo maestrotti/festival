@@ -37,9 +37,9 @@ header {
 
 /* Logo */
 .logo img {
-    max-width: 135px;
+    max-width: 100px;
     position: absolute;
-    top: 10px;
+    top: 7px;
     left: 10px;
 }
 
