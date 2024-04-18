@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TOURIST GUIDE  Goražde</title>
+    <title>Goražde Tourist Guide</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Common styles */
@@ -81,7 +81,8 @@
         .shopping,
         .eat,
         .events,
-        .program {
+        .program,
+        .outings {
             margin-bottom: 50px;
         }
 
@@ -104,7 +105,8 @@
         .shopping-btn,
         .eat-btn,
         .events-btn,
-        .program-btn {
+        .program-btn,
+        .outings-btn {
             background-color: #ff1493;
             color: #fff;
             padding: 10px 20px;
@@ -122,7 +124,8 @@
         .shopping-btn:hover,
         .eat-btn:hover,
         .events-btn:hover,
-        .program-btn:hover {
+        .program-btn:hover,
+        .outings-btn:hover {
             background-color: #ff69b4;
         }
 
@@ -140,7 +143,8 @@
             .visit-images img,
             .out-images img,
             .shopping-images img,
-            .eat-images img {
+            .eat-images img,
+            .outing-images img {
                 width: 100%;
                 max-width: 100%;
                 height: auto;
@@ -153,7 +157,8 @@
         .visit-images img,
         .out-images img,
         .shopping-images img,
-        .eat-images img {
+        .eat-images img,
+        .outing-images img {
             width: 100%; /* Ensure all images are full width */
             max-width: 100%; /* Prevent images from overflowing */
             height: auto; /* Maintain aspect ratio */
@@ -165,8 +170,7 @@
 
 <body>
     <header>
-        <h1 class="title">TOURIST GUIDE  Goražde</h1>
-  
+        <h1 class="title">Goražde Tourist Guide</h1>
     </header>
 
     <section class="flags">
@@ -185,21 +189,15 @@
         <img src="slovenia.png" alt="Flag 2">
         <img src="germ.png" alt="Flag 1">
         <img src="usa.png" alt="Flag 2">
-        
     </section>
 
     <section class="activities">
         <h2 class="subtitle">What to Visit?</h2>
-        <div class="visit-images">
-            <img src="https://github.com/maestrotti/festival/blob/main/razdego7.jpg?raw=true" alt="What to Visit Image">
-
-
-        </div>
         <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
             Gorazde, a hero city in eastern Bosnia, the only BiH city on the Drina that managed to defend itself in the last war, and today a true small economic miracle.</br>
-    
+
             For a long time, this small town flourished as a stop on the trade route that led from Serbia and Montenegro to Sarajevo. The Drina is a favorite place for swimming and rafting, so cafes and restaurants on the banks of the river are always full.</br>
-    
+
             South of Gorazde is one of the largest medieval cemeteries in the country. It is assumed that there are about 600 medieval tombstones in one cemetery on the hillside.
         </p>
         <button class="visit-btn" onclick="location.href='visit.html'">See More</button>
@@ -212,7 +210,7 @@
         </div>
         <button class="sleep-btn" onclick="location.href='sleep.html'">See More</button>
     </section>
-
+    
     <section class="shopping">
         <h2 class="subtitle">Shopping</h2>
         <div class="shopping-images">
@@ -221,31 +219,38 @@
         </div>
         <button class="shopping-btn" onclick="location.href='shopping.html'">See More</button>
     </section>
-
+    
     <section class="eat">
         <h2 class="subtitle">What to Eat?</h2>
         <div class="eat-images">
-
     
+        
         </div>
         <button class="eat-btn" onclick="location.href='eat.html'">See More</button>
     </section>
-
+    
     <section class="events">
         <h2 class="subtitle">Events</h2>
         <div class="event-description">
         </div>
         <button class="events-btn" onclick="location.href='events.html'">See More</button>
     </section>
-
-    <section class="program">
-        <h2 class="subtitle">Festival Program</h2>
-        <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="program-btn" target="_blank">Download Program</a>
+    
+    <section class="outings">
+        <h2 class="subtitle">Where to Go Out?</h2>
+        <div class="outing-images">
+            <!-- Add images for cafes, bars, clubs, etc. -->
+            <img src="cafe.jpg" alt="Cafe">
+            <img src="bar.jpg" alt="Bar">
+            <img src="club.jpg" alt="Club">
+        </div>
+        <button class="outings-btn" onclick="location.href='outings.html'">See More</button>
     </section>
-
+    
     <footer>
         <p>&copy; 2024 - Goražde</p>
     </footer>
-</body>
-
-</html>
+    </body>
+    
+    </html>
+    
