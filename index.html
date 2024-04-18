@@ -84,6 +84,7 @@
         .program,
         .outings {
             margin-bottom: 50px;
+            text-align: center;
         }
 
         /* Subtitle */
@@ -116,6 +117,8 @@
             cursor: pointer;
             transition: background-color 0.3s;
             margin-bottom: 10px; /* Add some space below buttons */
+            display: block;
+            margin: 0 auto;
         }
 
         .visit-btn:hover,
@@ -165,6 +168,11 @@
             object-fit: cover; /* Scale images while maintaining aspect ratio */
             margin-bottom: 5px; /* Add spacing between images */
         }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 
@@ -173,84 +181,22 @@
         <h1 class="title">Goražde Tourist Guide</h1>
     </header>
 
-    <section class="flags">
-        <img src="bosna.png" alt="Flag 1">
-        <img src="france.png" alt="Flag 2">
-        <img src="turska.jpeg" alt="Flag 1">
-        <img src="sved.png" alt="Flag 2">
-        <img src="maced.png" alt="Flag 2">
-        <img src="spain.png" alt="Flag 1">
-        <img src="cro.png" alt="Flag 1">
-        <img src="italy.png" alt="Flag 2">
-        <img src="swiss.png" alt="Flag 1">
-        <img src="srb.jpeg" alt="Flag 2">
-        <img src="austria.png" alt="Flag 1">
-        <img src="crna.png" alt="Flag 2">
-        <img src="slovenia.png" alt="Flag 2">
-        <img src="germ.png" alt="Flag 1">
-        <img src="usa.png" alt="Flag 2">
-    </section>
+    <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
+        Gorazde, a hero city in eastern Bosnia, the only BiH city on the Drina that managed to defend itself in the last war, and today a true small economic miracle.</br>
+
+        For a long time, this small town flourished as a stop on the trade route that led from Serbia and Montenegro to Sarajevo. The Drina is a favorite place for swimming and rafting, so cafes and restaurants on the banks of the river are always full.</br>
+
+        South of Gorazde is one of the largest medieval cemeteries in the country. It is assumed that there are about 600 medieval tombstones in one cemetery on the hillside.
+    </p>
 
     <section class="activities">
         <h2 class="subtitle">What to Visit?</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-            Gorazde, a hero city in eastern Bosnia, the only BiH city on the Drina that managed to defend itself in the last war, and today a true small economic miracle.</br>
-
-            For a long time, this small town flourished as a stop on the trade route that led from Serbia and Montenegro to Sarajevo. The Drina is a favorite place for swimming and rafting, so cafes and restaurants on the banks of the river are always full.</br>
-
-            South of Gorazde is one of the largest medieval cemeteries in the country. It is assumed that there are about 600 medieval tombstones in one cemetery on the hillside.
-        </p>
         <button class="visit-btn" onclick="location.href='visit.html'">See More</button>
     </section>
-    <section class="out">
-        <h2 class="subtitle">Where to Spend the Night?</h2>
-        <div class="out-images">
-           
-            <!-- Add more images and links -->
-        </div>
-        <button class="sleep-btn" onclick="location.href='sleep.html'">See More</button>
-    </section>
-    
-    <section class="shopping">
-        <h2 class="subtitle">Shopping</h2>
-        <div class="shopping-images">
-           
-            <!-- Add more images -->
-        </div>
-        <button class="shopping-btn" onclick="location.href='shopping.html'">See More</button>
-    </section>
-    
-    <section class="eat">
-        <h2 class="subtitle">What to Eat?</h2>
-        <div class="eat-images">
-    
-        
-        </div>
-        <button class="eat-btn" onclick="location.href='eat.html'">See More</button>
-    </section>
-    
-    <section class="events">
-        <h2 class="subtitle">Events</h2>
-        <div class="event-description">
-        </div>
-        <button class="events-btn" onclick="location.href='events.html'">See More</button>
-    </section>
-    
-    <section class="outings">
-        <h2 class="subtitle">Where to Go Out?</h2>
-        <div class="outing-images">
-            <!-- Add images for cafes, bars, clubs, etc. -->
-            <img src="cafe.jpg" alt="Cafe">
-            <img src="bar.jpg" alt="Bar">
-            <img src="club.jpg" alt="Club">
-        </div>
-        <button class="outings-btn" onclick="location.href='outings.html'">See More</button>
-    </section>
-    
+
     <footer>
         <p>&copy; 2024 - Goražde</p>
     </footer>
-    </body>
-    
-    </html>
-    
+</body>
+
+</html>
