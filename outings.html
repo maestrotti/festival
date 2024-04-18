@@ -129,42 +129,40 @@
     <button class="home-btn" onclick="location.href='index.html'">Home</button>
 
     <section class="outings">
-        <h2 class="subtitle">Cafes</h2>
+        <h2 class="subtitle">Cafes & Nightclubs</h2>
         <div class="outing-description">
             <div class="outing">
                 <img src="bumerang.jpg" alt="Bumerang Cafe">
                 <div class="outing-name">Bumerang Cafe</div>
+                <button class="reserve-btn" onclick="displayContactInfo('Bumerang Cafe')">Reservations</button>
             </div>
             <div class="outing">
                 <img src="art.jpg" alt="Art Cafe">
                 <div class="outing-name">Art Cafe</div>
+                <button class="reserve-btn" onclick="displayContactInfo('Art Cafe')">Reservations</button>
             </div>
             <div class="outing">
                 <img src="san.jpg" alt="San Cafe">
                 <div class="outing-name">San Cafe</div>
+                <button class="reserve-btn" onclick="displayContactInfo('San Cafe')">Reservations</button>
             </div>
             <div class="outing">
                 <img src="carpe.jpg" alt="Carpe Diem Cafe">
                 <div class="outing-name">Carpe Diem Cafe</div>
+                <button class="reserve-btn" onclick="displayContactInfo('Carpe Diem Cafe')">Reservations</button>
             </div>
-        </div>
-    </section>
-
-    <section class="outings">
-        <h2 class="subtitle">Nightclubs</h2>
-        <div class="outing-description">
             <div class="outing">
                 <img src="m.jpg" alt="M Club">
                 <div class="outing-name">M Club</div>
+                <button class="reserve-btn" onclick="displayContactInfo('M Club')">Reservations</button>
             </div>
             <div class="outing">
                 <img src="selfi.jpg" alt="Selfi Nightclub">
                 <div class="outing-name">Selfi Nightclub</div>
+                <button class="reserve-btn" onclick="displayContactInfo('Selfi Nightclub')">Reservations</button>
             </div>
         </div>
     </section>
-
-    <button class="reserve-btn" onclick="displayContactInfo()">Reservations</button>
 
     <footer>
         <p>&copy; 2024 - Goražde</p>
@@ -172,13 +170,38 @@
 
     <!-- Skripta za prikaz kontaktnih informacija -->
     <script>
-        function displayContactInfo() {
-            // Ovde možeš postaviti kontakt informacije koje želiš da prikažeš
-            var phoneNumber = "+1234567890";
-            var email = "info@example.com";
+        function displayContactInfo(placeName) {
+            // Ovde možeš postaviti kontakt informacije za svako mesto
+            var contactInfo = {
+                "Bumerang Cafe": { "phone": "+1234567890", "email": "info@bumerangcafe.com" },
+                "Art Cafe": { "phone": "+1234567891", "email": "info@artcafe.com" },
+                "San Cafe": { "phone": "+1234567892", "email": "info@sancafe.com" },
+                "Carpe Diem Cafe": { "phone": "+1234567893", "email": "info@carpediemcafe.com" },
+                "M Club": { "phone": "+1234567894", "email": "info@mclub.com" },
+                "Selfi Nightclub": { "phone": "+1234567895", "email": "info@selfinightclub.com" }
+            };
 
-            // Prikazuje kontakt informacije u alert box-u
-            alert("Phone: " + phoneNumber + "\nEmail: " + email);
+            var info = contactInfo[placeName];
+            if (info) {
+                alert("Phone: " + info.phone + "\nEmail: " + info.email);
+            } else {
+                alert("Contact information not available.");
+            }
+        }
+    </script>
+
+    <!-- Google mape skripta -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        // Inicijalizacija mape
+        function initMap() {
+            // Pozicija centra mape
+            var center = { lat: 43.6667, lng: 18.9784 };
+            // Kreiranje instance mape
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: center
+            });
         }
     </script>
 </body>
