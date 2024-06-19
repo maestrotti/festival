@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TOURIST GUIDE  Goražde</title>
+    <title>TOURIST GUIDE Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Common styles */
@@ -37,6 +37,7 @@
         .title {
             color: #e91e63;
             font-size: 36px;
+            margin-top: 100px; /* Add margin-top to move title below logo */
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -49,7 +50,8 @@
             max-width: 100px;
             position: absolute;
             top: 10px;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%); /* Center the logo */
         }
 
         /* Sponsor */
@@ -82,7 +84,8 @@
         .eat,
         .events,
         .program,
-        .outings {
+        .outings,
+        .sports {
             margin-bottom: 50px;
             text-align: center;
         }
@@ -107,7 +110,8 @@
         .eat-btn,
         .events-btn,
         .program-btn,
-        .outings-btn {
+        .outings-btn,
+        .sports-btn {
             background-color: #ff1493;
             color: #fff;
             padding: 10px 20px;
@@ -128,12 +132,17 @@
         .eat-btn:hover,
         .events-btn:hover,
         .program-btn:hover,
-        .outings-btn:hover {
+        .outings-btn:hover,
+        .sports-btn:hover {
             background-color: #ff69b4;
         }
 
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
+            .logo img {
+                max-width: 80px; /* Adjust logo size for mobile */
+            }
+
             .flags img {
                 max-width: 40px;
                 margin: 2px;
@@ -147,7 +156,8 @@
             .out-images img,
             .shopping-images img,
             .eat-images img,
-            .outing-images img {
+            .outing-images img,
+            .sports-images img {
                 width: 100%;
                 max-width: 100%;
                 height: auto;
@@ -161,7 +171,8 @@
         .out-images img,
         .shopping-images img,
         .eat-images img,
-        .outing-images img {
+        .outing-images img,
+        .sports-images img {
             width: 100%; /* Ensure all images are full width */
             max-width: 100%; /* Prevent images from overflowing */
             height: auto; /* Maintain aspect ratio */
@@ -178,10 +189,10 @@
 
 <body>
     <header>
-        <h1 class="title">TOURIST GUIDE  Goražde</h1>
         <div class="logo">
             <img src="grad.png" alt="Your Logo">
         </div>
+        <h1 class="title">TOURIST GUIDE Goražde</h1>
     </header>
 
     <section class="flags">
@@ -249,6 +260,7 @@
         </div>
         <button class="eat-btn" onclick="location.href='eat.html'">See More</button>
     </section>
+    
     <section class="outings">
         <h2 class="subtitle">Where to Go Out?</h2>
         <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
@@ -259,6 +271,7 @@
         </div>
         <button class="outings-btn" onclick="location.href='outings.html'">See More</button>
     </section>
+
     <section class="sports">
         <h2 class="subtitle">Sports Activities</h2>
         <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
@@ -292,4 +305,3 @@
 </body>
 
 </html>
-
