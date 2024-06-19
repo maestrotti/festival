@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
         }
-
+    
         /* Body */
         body {
             font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
             font-size: 16px;
             line-height: 1.6;
         }
-
+    
         /* Header */
         header {
             background-image: url('international.png');
@@ -32,7 +32,7 @@
             text-align: center;
             position: relative;
         }
-
+    
         /* Title */
         .title {
             color: #e91e63;
@@ -44,7 +44,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             transform: skew(-10deg);
         }
-
+    
         /* Logo */
         .logo img {
             max-width: 100px;
@@ -53,7 +53,7 @@
             left: 50%;
             transform: translateX(-50%); /* Center the logo */
         }
-
+    
         /* Sponsor */
         .sponsor img {
             max-width: 200px;
@@ -61,7 +61,7 @@
             bottom: 20px;
             right: 20px;
         }
-
+    
         /* Flags */
         .flags {
             overflow-x: auto; /* Enable horizontal scrolling for flags */
@@ -71,12 +71,12 @@
             display: flex;
             flex-wrap: nowrap;
         }
-
+    
         .flags img {
             max-width: 40px; /* Reduce flag width for mobile devices */
             margin: 2px; /* Reduce spacing between flags */
         }
-
+    
         /* Activities, Out, Shopping, Eat, Events, Program */
         .activities,
         .out,
@@ -89,7 +89,7 @@
             margin-bottom: 50px;
             text-align: center;
         }
-
+    
         /* Subtitle */
         .subtitle {
             color: #ff1493;
@@ -101,7 +101,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             transform: skew(-10deg);
         }
-
+    
         /* Button style */
         .visit-btn,
         .sleep-btn,
@@ -124,7 +124,7 @@
             display: block;
             margin: 0 auto;
         }
-
+    
         .visit-btn:hover,
         .sleep-btn:hover,
         .out-btn:hover,
@@ -136,22 +136,22 @@
         .sports-btn:hover {
             background-color: #ff69b4;
         }
-
+    
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .logo img {
                 max-width: 80px; /* Adjust logo size for mobile */
             }
-
+    
             .flags img {
                 max-width: 40px;
                 margin: 2px;
             }
-
+    
             .flags {
                 overflow-x: auto;
             }
-
+    
             .visit-images img,
             .out-images img,
             .shopping-images img,
@@ -165,7 +165,7 @@
                 margin-bottom: 5px;
             }
         }
-
+    
         /* Additional styling */
         .visit-images img,
         .out-images img,
@@ -179,12 +179,61 @@
             object-fit: cover; /* Scale images while maintaining aspect ratio */
             margin-bottom: 5px; /* Add spacing between images */
         }
-
+    
         footer {
             text-align: center;
             margin-top: 50px;
         }
+    
+        /* New styles for index.html */
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    
+        .place {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: calc(50% - 20px); /* Two columns on larger screens */
+            border-radius: 5px;
+        }
+    
+        .place img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    
+        .place-description {
+            color: #666;
+        }
+    
+        .place-links {
+            margin-top: 10px;
+        }
+    
+        .place-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    
+        .place-link:hover {
+            color: #007bff;
+        }
     </style>
+    
 </head>
 
 <body>

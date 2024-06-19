@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Places to Visit</title>
     <style>
-        /* Možeš dodati stilizaciju prema potrebi */
+        /* Stilizacija za mobilne uređaje */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -19,9 +19,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .title {
             margin: 0;
+            font-size: 1.5em; /* Veći font za naslov */
+            text-transform: uppercase; /* Naslov u vinklu */
         }
         .home-btn, .search-btn {
             text-decoration: none;
@@ -39,13 +45,14 @@
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
+            margin-top: 60px; /* Prostor za header na mobilnim uređajima */
         }
         .place {
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin: 10px;
             padding: 15px;
-            width: 300px;
+            width: calc(50% - 20px); /* Dvije kolone na većim ekranima */
             border-radius: 5px;
         }
         .place img {
@@ -81,13 +88,23 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Media query za mobilne uređaje */
+        @media (max-width: 768px) {
+            .places {
+                padding: 10px;
+            }
+            .place {
+                width: calc(100% - 20px); /* Jedna kolona na mobilnim uređajima */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 class="title">Places to Visit</h1>
         <a href="index.html" class="home-btn">Home</a>
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" id="searchInput" placeholder="Search..." class="search-btn">
     </header>
     <section class="places">
         <div class="place">
@@ -110,7 +127,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="splav.png" alt="Splav" class="place-img">
             <h2 class="place-title">Splavarenje na Drini</h2>
@@ -121,7 +137,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="ribolov.png" alt="Ribolov" class="place-img">
             <h2 class="place-title">Ribolov na Drini</h2>
@@ -132,7 +147,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="zanj.png" alt="Žanj" class="place-img">
             <h2 class="place-title">Žanj</h2>
@@ -143,7 +157,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="rorovi.png" alt="Rorovi" class="place-img">
             <h2 class="place-title">Rorovi</h2>
@@ -154,7 +167,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="bazeni.png" alt="Bazeni" class="place-img">
             <h2 class="place-title">Bazeni</h2>
@@ -165,7 +177,6 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="omladinska.jpeg" alt="Omladinska" class="place-img">
             <h2 class="place-title">Omladinska ulica</h2>
@@ -176,165 +187,10 @@
             </div>
         </div>
 
-        <!-- Add more places -->
         <div class="place">
             <img src="kajserija.jpg" alt="Džamija" class="place-img">
             <h2 class="place-title">Kajserija Džamija</h2>
             <p class="place-description">Kajserija Džamija je povijesna džamija, Goraždanska ljepotica....</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="kvad.png" alt="Kvad" class="place-img">
-            <h2 class="place-title">Vožnja Kvadova</h2>
-            <p class="place-description">Vožnja kvadovima je uzbudljiva avantura koja će vam omogućiti istraživanje okolnog terena.</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="somobor.jpg" alt="Somobor" class="place-img">
-            <h2 class="place-title">Samobor na Drini</h2>
-            <p class="place-description">Samobor...</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="turbe.png" alt="Turbe" class="place-img">
-            <h2 class="place-title">Turbe</h2>
-            <p class="place-description">Turbe je povijesni spomenik koji datira iz srednjeg vijeka.</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="rimski.png" alt="Most" class="place-img">
-            <h2 class="place-title">Rimski Most</h2>
-            <p class="place-description">Rimski most je povijesna građevina iz antičkog doba....</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="mostispodmosta.jpeg" alt="Most ispod mosta" class="place-img">
-            <h2 class="place-title">Most ispod Mosta</h2>
-            <p class="place-description">Most ispod mosta je u ratu značio....</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="galerija.jpg" alt="Galerija" class="place-img">
-            <h2 class="place-title">Galerija</h2>
-            <p class="place-description">Najstarija građevina iz Austro-Ugarskog doba...</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="mucenice.jpeg" alt="Mućenice" class="place-img">
-            <h2 class="place-title">Spomenik Drinskih Mučenica</h2>
-            <p class="place-description">U Vatikanu su proglašene kao blažene....</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="djozo.jpg" alt="Đožo" class="place-img">
-            <h2 class="place-title">O.Š."Husein ef. Đozo"</h2>
-            <p class="place-description">Danas osnovna škola, a nekad....</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="drinske.jpg" alt="Drinske" class="place-img">
-            <h2 class="place-title">Crkva Drinskih Mučenica</h2>
-            <p class="place-description">Katolička crkva</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="sejo.jpg" alt="Sejo" class="place-img">
-            <h2 class="place-title">Ranč porodice Brajlović</h2>
-            <p class="place-description">Kod Seja</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="zupcici.jpg" alt="Župčići" class="place-img">
-            <h2 class="place-title">Župčići</h2>
-            <p class="place-description">Izletište</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="sadba.jpg" alt="Sadba" class="place-img">
-            <h2 class="place-title">Sadba</h2>
-            <p class="place-description">Izletište</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="gubavica.jpg" alt="Gubavica" class="place-img">
-            <h2 class="place-title">Gubavica</h2>
-            <p class="place-description">Vidikovac...</p>
-            <div class="place-links">
-                <a href="#" target="_blank" class="place-link">Website</a>
-                <a href="#" target="_blank" class="place-link">Google Maps</a>
-            </div>
-        </div>
-
-        <!-- Add more places -->
-        <div class="place">
-            <img src="basa.jpg" alt="Basa" class="place-img">
-            <h2 class="place-title">Kod Baše</h2>
-            <p class="place-description">restoran...</p>
             <div class="place-links">
                 <a href="#" target="_blank" class="place-link">Website</a>
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
