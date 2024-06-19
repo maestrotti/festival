@@ -1,137 +1,93 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places to Visit - Festival of Friendship</title>
+    <title>Places to Visit</title>
     <style>
-        /* Reset CSS */
-        * {
-            box-sizing: border-box;
+        /* Možeš dodati stilizaciju prema potrebi */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
-        /* Body */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f8ff; /* Light blue color */
-        color: #333;
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-        background-color: #e91e63; /* Pink color */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .title {
-        color: #fff; /* White color */
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    .home-btn {
-        color: #fff; /* White color */
-        text-decoration: none;
-        padding: 5px 10px;
-        border: 2px solid #fff; /* White color */
-        border-radius: 5px;
-        margin-top: 10px;
-        display: inline-block;
-    }
-
-    .home-btn:hover {
-        background-color: #fff; /* White color */
-        color: #e91e63; /* Pink color */
-    }
-
-    .search-btn {
-        color: #fff; /* White color */
-        text-decoration: none;
-        padding: 5px 10px;
-        background-color: #e91e63; /* Pink color */
-        border: 2px solid #e91e63; /* Pink color */
-        border-radius: 5px;
-        margin-top: 10px;
-        display: inline-block;
-        margin-left: 10px; /* Add margin between buttons */
-    }
-
-    .search-btn:hover {
-        background-color: #fff; /* White color */
-        color: #e91e63; /* Pink color */
-    }
-
-    /* Places */
-    .places {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .place {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    }
-
-    .place-title {
-        color: #e91e63; /* Pink color */
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .place-description {
-        margin-bottom: 10px;
-    }
-
-    .place-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        border-radius: 10px;
-    }
-
-    .place-links {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
-
-    .place-link {
-        color: #333;
-        text-decoration: none;
-        padding: 5px 10px;
-        border: 1px solid #333;
-        border-radius: 5px;
-    }
-
-    .place-link:hover {
-        background-color: #333;
-        color: #fff;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #ffd700; /* Yellow color */
-        color: #333;
-        padding: 20px;
-        text-align: center;
-        margin-top: 50px;
-    }
-</style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title {
+            margin: 0;
+        }
+        .home-btn, .search-btn {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .home-btn:hover, .search-btn:hover {
+            background-color: #555;
+        }
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .place {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        .place img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .place-description {
+            color: #666;
+        }
+        .place-links {
+            margin-top: 10px;
+        }
+        .place-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .place-link:hover {
+            color: #007bff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1 class="title">Places to Visit</h1>
         <a href="index.html" class="home-btn">Home</a>
-        <a href="#" class="search-btn">Search</a>
+        <input type="text" id="searchInput" placeholder="Search...">
     </header>
     <section class="places">
         <div class="place">
@@ -143,7 +99,7 @@
                 <a href="https://www.google.com/maps?q=43.666667,18.966667" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <div class="place">
             <img src="bijelevode.jpg" alt="Bijelevode" class="place-img">
             <h2 class="place-title">Bijele Vode</h2>
@@ -153,8 +109,7 @@
                 <a href="https://www.google.com/maps?q=44.071733,17.984119" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
-        <!-- Add more places -->
+
         <!-- Add more places -->
         <div class="place">
             <img src="splav.png" alt="Splav" class="place-img">
@@ -165,7 +120,7 @@
                 <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="ribolov.png" alt="Ribolov" class="place-img">
@@ -176,18 +131,18 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="zanj.png" alt="Žanj" class="place-img">
             <h2 class="place-title">Žanj</h2>
-            <p class="place-description">Žanj je plaža </p>
+            <p class="place-description">Žanj je plaža</p>
             <div class="place-links">
                 <a href="#" target="_blank" class="place-link">Website</a>
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="rorovi.png" alt="Rorovi" class="place-img">
@@ -198,7 +153,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="bazeni.png" alt="Bazeni" class="place-img">
@@ -209,7 +164,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="omladinska.jpeg" alt="Omladinska" class="place-img">
@@ -220,7 +175,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="kajserija.jpg" alt="Džamija" class="place-img">
@@ -231,7 +186,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="kvad.png" alt="Kvad" class="place-img">
@@ -242,7 +197,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="somobor.jpg" alt="Somobor" class="place-img">
@@ -253,7 +208,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="turbe.png" alt="Turbe" class="place-img">
@@ -264,7 +219,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="rimski.png" alt="Most" class="place-img">
@@ -275,7 +230,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="mostispodmosta.jpeg" alt="Most ispod mosta" class="place-img">
@@ -286,7 +241,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="galerija.jpg" alt="Galerija" class="place-img">
@@ -297,7 +252,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="mucenice.jpeg" alt="Mućenice" class="place-img">
@@ -308,7 +263,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="djozo.jpg" alt="Đožo" class="place-img">
@@ -319,7 +274,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="drinske.jpg" alt="Drinske" class="place-img">
@@ -330,7 +285,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="sejo.jpg" alt="Sejo" class="place-img">
@@ -341,7 +296,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="zupcici.jpg" alt="Župčići" class="place-img">
@@ -352,7 +307,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="sadba.jpg" alt="Sadba" class="place-img">
@@ -363,7 +318,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="gubavica.jpg" alt="Gubavica" class="place-img">
@@ -374,7 +329,7 @@
                 <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-    
+
         <!-- Add more places -->
         <div class="place">
             <img src="basa.jpg" alt="Basa" class="place-img">
@@ -386,9 +341,26 @@
             </div>
         </div>
     </section>
-    
+
     <footer>
         <p>&copy; 2024 - Goražde</p>
     </footer>
+
+    <script>
+        // JavaScript za pretraživanje
+        const searchInput = document.getElementById('searchInput');
+
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase();
+            const places = document.querySelectorAll('.place');
+
+            places.forEach(place => {
+                const title = place.querySelector('.place-title').textContent.toLowerCase();
+                const description = place.querySelector('.place-description').textContent.toLowerCase();
+                const shouldShow = title.includes(filter) || description.includes(filter);
+                place.style.display = shouldShow ? 'block' : 'none';
+            });
+        });
+    </script>
 </body>
 </html>
