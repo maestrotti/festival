@@ -64,15 +64,20 @@
             margin: 0 5px;
         }
     
-        /* Activities sections */
-        .section {
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
+        /* Activities, Out, Shopping, Eat, Events, Program */
+        .activities,
+        .out,
+        .shopping,
+        .eat,
+        .events,
+        .program,
+        .outings,
+        .sports {
+            margin-bottom: 50px;
+            text-align: center;
         }
     
+        /* Subtitle */
         .subtitle {
             color: #ff1493;
             font-size: 24px;
@@ -84,7 +89,15 @@
         }
     
         /* Button style */
-        .btn {
+        .visit-btn,
+        .sleep-btn,
+        .out-btn,
+        .shopping-btn,
+        .eat-btn,
+        .events-btn,
+        .program-btn,
+        .outings-btn,
+        .sports-btn {
             background-color: #ff1493;
             color: #fff;
             padding: 10px 20px;
@@ -93,22 +106,49 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-bottom: 10px; /* Add some space below buttons */
             display: inline-block;
-            margin-top: 10px;
+            margin: 0 auto;
         }
     
-        .btn:hover {
+        .visit-btn:hover,
+        .sleep-btn:hover,
+        .out-btn:hover,
+        .shopping-btn:hover,
+        .eat-btn:hover,
+        .events-btn:hover,
+        .program-btn:hover,
+        .outings-btn:hover,
+        .sports-btn:hover {
             background-color: #ff69b4;
         }
     
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .logo img {
-                max-width: 80px;
+                max-width: 80px; /* Adjust logo size for mobile */
             }
     
             .flags img {
-                max-width: 30px;
+                max-width: 40px;
+                margin: 2px; /* Reduce spacing between flags */
+            }
+    
+            .flags {
+                overflow-x: auto; /* Enable horizontal scrolling for flags */
+            }
+    
+            .visit-images img,
+            .out-images img,
+            .shopping-images img,
+            .eat-images img,
+            .outing-images img,
+            .sports-images img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 5px; /* Add spacing between images */
             }
         }
     
@@ -131,9 +171,55 @@
             background-color: #333;
             color: #fff;
         }
+    
+        /* New styles for index.html */
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    
+        .place {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: calc(50% - 20px); /* Two columns on larger screens */
+            border-radius: 5px;
+        }
+    
+        .place img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    
+        .place-description {
+            color: #666;
+        }
+    
+        .place-links {
+            margin-top: 10px;
+        }
+    
+        .place-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    
+        .place-link:hover {
+            color: #007bff;
+        }
     </style>
-    
-    
 </head>
 
 <body>
