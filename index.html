@@ -40,30 +40,36 @@
             letter-spacing: 2px;
             margin-bottom: 10px;
             font-family: 'Arial Black', sans-serif;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-color: #ff1493; /* Pozadina naslova */
             padding: 10px 20px;
             border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
         }
     
         /* Logo */
+        .logo-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+    
         .logo {
-            background-image: url('nova_slika.jpg'); /* Nova slika logotipa */
+            background-image: url('nova_slika.jpg'); /* Slika logotipa */
             background-size: cover;
             background-position: center;
-            width: 150px; /* Povećanje veličine logotipa */
+            width: 150px; /* Veličina logotipa */
             height: 150px;
             border-radius: 50%; /* Oblik vinkla za logo */
             margin: 0 auto;
             overflow: hidden;
-        }
-    
-        .logo img {
-            display: none; /* Skrivanje slike ako je ima */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     
         /* Stil podnaslova */
@@ -120,21 +126,21 @@
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .logo {
-                width: 100px; /* Adjust logo size for mobile */
+                width: 100px; /* Prilagodba veličine logotipa za mobilne uređaje */
                 height: 100px;
             }
     
             .flags img {
                 max-width: 40px;
-                margin: 2px; /* Reduce spacing between flags */
+                margin: 2px; /* Smanjenje razmaka između zastava */
             }
     
             .flags {
-                overflow-x: auto; /* Enable horizontal scrolling for flags */
+                overflow-x: auto; /* Omogućavanje horizontalnog pomicanja za zastave */
             }
         }
     
-        /* Additional styling */
+        /* Dodatni stilovi */
         .image-container {
             text-align: center;
             margin-bottom: 20px;
@@ -159,7 +165,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 10px;
             padding: 15px;
-            width: calc(50% - 20px); /* Two columns on larger screens */
+            width: calc(50% - 20px); /* Dva stupca na većim ekranima */
             border-radius: 5px;
         }
     
@@ -181,74 +187,76 @@
 
 <body>
     <header>
-        <div class="logo"></div>
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
         <h1 class="title">TOURIST GUIDE Goražde</h1>
     </header>
 
     <main>
         <section class="flags">
-            <!-- Flags section -->
+            <!-- Sekcija sa zastavama -->
         </section>
 
         <section class="activities">
-            <h2 class="subtitle">What to Visit?</h2>
+            <h2 class="subtitle">Šta posjetiti?</h2>
             <p>
-                Explore the beauty of Goražde, a historic city nestled on the banks of the Drina River. From medieval cemeteries to vibrant cafes, there's something for everyone.
+                Istražite ljepotu Goražda, historijskog grada smještenog na obalama rijeke Drine. Od srednjovjekovnih grobalja do živahnih kafića, tu je nešto za svakoga.
             </p>
-            <a href="visit.html" class="btn">See More</a>
+            <a href="visit.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="out">
-            <h2 class="subtitle">Where to Spend the Night?</h2>
+            <h2 class="subtitle">Gdje prespavati?</h2>
             <p>
-                Discover comfortable accommodations in Goražde, ranging from hotels to cozy guesthouses. Experience true hospitality during your stay.
+                Otkrijte udoban smještaj u Goraždu, od hotela do ušuškanih pansiona. Doživite pravu gostoljubivost tokom vašeg boravka.
             </p>
-            <a href="sleep.html" class="btn">See More</a>
+            <a href="sleep.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="shopping">
-            <h2 class="subtitle">Shopping</h2>
+            <h2 class="subtitle">Šoping</h2>
             <p>
-                Explore local shops and boutiques offering unique products. Enjoy shopping in Goražde with diverse options to suit your taste.
+                Istražite lokalne prodavnice i butike koji nude jedinstvene proizvode. Uživajte u šopingu u Goraždu sa raznovrsnim opcijama koje odgovaraju vašem ukusu.
             </p>
-            <a href="shopping.html" class="btn">See More</a>
+            <a href="shopping.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="eat">
-            <h2 class="subtitle">What to Eat?</h2>
+            <h2 class="subtitle">Šta jesti?</h2>
             <p>
-                Indulge in traditional Bosnian cuisine and international dishes at restaurants and cafes in Goražde. Taste the flavors of the region.
+                Uživajte u tradicionalnoj bosanskoj kuhinji i internacionalnim jelima u restoranima i kafićima u Goraždu. Okusite okuse regiona.
             </p>
-            <a href="eat.html" class="btn">See More</a>
+            <a href="eat.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="outings">
-            <h2 class="subtitle">Where to Go Out?</h2>
+            <h2 class="subtitle">Gdje izlaziti?</h2>
             <p>
-                Experience the vibrant nightlife of Goražde with cafes, bars, and clubs offering entertainment for every taste.
+                Doživite živahni noćni život Goražda sa kafićima, barovima i klubovima koji nude zabavu za svaki ukus.
             </p>
-            <a href="outings.html" class="btn">See More</a>
+            <a href="outings.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="sports">
-            <h2 class="subtitle">Sports Activities</h2>
+            <h2 class="subtitle">Sportske aktivnosti</h2>
             <p>
-                Enjoy outdoor activities in Goražde, including hiking, cycling, and water sports. Explore the natural beauty of the region.
+                Uživajte u vanjskim aktivnostima u Goraždu, uključujući planinarenje, biciklizam i vodene sportove. Istražite prirodnu ljepotu regiona.
             </p>
-            <a href="sports.html" class="btn">See More</a>
+            <a href="sports.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="events">
-            <h2 class="subtitle">Events</h2>
+            <h2 class="subtitle">Događaji</h2>
             <p>
-                Discover cultural events and festivals in Goražde. Experience the local traditions and celebrations along the Drina River.
+                Otkrijte kulturne događaje i festivale u Goraždu. Doživite lokalne tradicije i proslave uz rijeku Drinu.
             </p>
-            <a href="events.html" class="btn">See More</a>
+            <a href="events.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="program">
-            <h2 class="subtitle">Festival Program</h2>
-            <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="btn" target="_blank">Download Program</a>
+            <h2 class="subtitle">Program festivala</h2>
+            <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="btn" target="_blank">Preuzmi program</a>
         </section>
     </main>
 
