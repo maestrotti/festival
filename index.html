@@ -19,7 +19,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background-color: #000;
-            color: #ffd700; /* Žuta boja za tekst */
+            color: #fff; /* Bijela boja za tekst */
             margin: 0;
             padding: 0;
         }
@@ -30,22 +30,40 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            position: relative;
         }
     
         /* Naslov */
         .title {
-            font-size: 2rem;
+            font-size: 3rem; /* Povećan font za naslov */
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
             font-family: 'Arial Black', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff1493; /* Pozadina naslova */
+            padding: 10px 20px;
+            border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     
         /* Logo */
+        .logo {
+            background-image: url('nova_slika.jpg'); /* Nova slika logotipa */
+            background-size: cover;
+            background-position: center;
+            width: 150px; /* Povećanje veličine logotipa */
+            height: 150px;
+            border-radius: 50%; /* Oblik vinkla za logo */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
         .logo img {
-            max-width: 100px;
-            height: auto;
+            display: none; /* Skrivanje slike ako je ima */
         }
     
         /* Stil podnaslova */
@@ -64,7 +82,7 @@
             font-size: 1rem;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #666; /* General paragraph style */
+            color: #fff; /* Bijela boja za tekst */
         }
     
         /* Stiliranje dugmadi */
@@ -101,8 +119,9 @@
     
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
-            .logo img {
-                max-width: 80px; /* Adjust logo size for mobile */
+            .logo {
+                width: 100px; /* Adjust logo size for mobile */
+                height: 100px;
             }
     
             .flags img {
@@ -162,9 +181,7 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="grad.png" alt="Your Logo">
-        </div>
+        <div class="logo"></div>
         <h1 class="title">TOURIST GUIDE Goražde</h1>
     </header>
 
