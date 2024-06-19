@@ -50,30 +50,6 @@
             display: inline-block; /* Da bi se smanjila širina naslova na potrebnu širinu teksta */
         }
     
-        /* Logo */
-        .logo-container {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-    
-        .logo {
-            /* background-image: url('nova_slika.jpg');  Slika logotipa */
-            /* background-size: cover; */
-            /* background-position: center; */
-            width: 150px; /* Veličina logotipa */
-            height: 150px;
-            border-radius: 50%; /* Oblik vinkla za logo */
-            margin: 0 auto;
-            overflow: hidden;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    
         /* Stil podnaslova */
         .subtitle {
             color: #ffd700; /* Žuta boja za podnaslove */
@@ -127,18 +103,12 @@
     
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
-            .logo {
-                width: 100px; /* Prilagodba veličine logotipa za mobilne uređaje */
-                height: 100px;
+            .title {
+                font-size: 2rem; /* Prilagodba veličine naslova za mobilne uređaje */
             }
     
-            .flags img {
-                max-width: 40px;
-                margin: 2px; /* Smanjenje razmaka između zastava */
-            }
-    
-            .flags {
-                overflow-x: auto; /* Omogućavanje horizontalnog pomicanja za zastave */
+            .btn {
+                padding: 8px 16px; /* Prilagodba veličine dugmadi za mobilne uređaje */
             }
         }
     
@@ -189,9 +159,6 @@
 
 <body>
     <header>
-        <!-- <div class="logo-container">
-            <div class="logo"></div>
-        </div> -->
         <h1 class="title">TOURIST GUIDE Goražde</h1>
     </header>
 
