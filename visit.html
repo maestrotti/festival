@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,268 +12,383 @@
             margin: 0;
             padding: 0;
         }
-
         /* Body */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* Light blue color */
-            color: #333;
-            font-size: 16px;
-            line-height: 1.6;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff; /* Light blue color */
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+    }
 
-        /* Header */
-        header {
-            background-color: #e91e63; /* Pink color */
-            padding: 20px;
-            text-align: center;
-        }
+    /* Header */
+    header {
+        background-color: #e91e63; /* Pink color */
+        padding: 20px;
+        text-align: center;
+    }
 
-        .title {
-            color: #fff; /* White color */
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+    .title {
+        color: #fff; /* White color */
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
 
-        .home-btn {
-            color: #fff; /* White color */
-            text-decoration: none;
-            padding: 5px 10px;
-            border: 2px solid #fff; /* White color */
-            border-radius: 5px;
-            margin-top: 10px;
-            display: inline-block;
-        }
+    .home-btn {
+        color: #fff; /* White color */
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 2px solid #fff; /* White color */
+        border-radius: 5px;
+        margin-top: 10px;
+        display: inline-block;
+    }
 
-        .home-btn:hover {
-            background-color: #fff; /* White color */
-            color: #e91e63; /* Pink color */
-        }
+    .home-btn:hover {
+        background-color: #fff; /* White color */
+        color: #e91e63; /* Pink color */
+    }
 
-        .search-btn {
-            color: #fff; /* White color */
-            text-decoration: none;
-            padding: 5px 10px;
-            background-color: #e91e63; /* Pink color */
-            border: 2px solid #e91e63; /* Pink color */
-            border-radius: 5px;
-            margin-top: 10px;
-            display: inline-block;
-            margin-left: 10px; /* Add margin between buttons */
-        }
+    .search-btn {
+        color: #fff; /* White color */
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #e91e63; /* Pink color */
+        border: 2px solid #e91e63; /* Pink color */
+        border-radius: 5px;
+        margin-top: 10px;
+        display: inline-block;
+        margin-left: 10px; /* Add margin between buttons */
+    }
 
-        .search-btn:hover {
-            background-color: #fff; /* White color */
-            color: #e91e63; /* Pink color */
-        }
+    .search-btn:hover {
+        background-color: #fff; /* White color */
+        color: #e91e63; /* Pink color */
+    }
 
-        .search-container {
-            margin-top: 10px;
-        }
+    /* Places */
+    .places {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 
-        .search-input {
-            padding: 5px;
-            font-size: 16px;
-            border: 2px solid #e91e63; /* Pink color */
-            border-radius: 5px;
-        }
+    .place {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    }
 
-        /* Places */
-        .places {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+    .place-title {
+        color: #e91e63; /* Pink color */
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-        .place {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-        }
+    .place-description {
+        margin-bottom: 10px;
+    }
 
-        .place-title {
-            color: #e91e63; /* Pink color */
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .place-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
 
-        .place-description {
-            margin-bottom: 10px;
-        }
+    .place-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
 
-        .place-img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 10px;
-        }
+    .place-link {
+        color: #333;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+    }
 
-        .place-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+    .place-link:hover {
+        background-color: #333;
+        color: #fff;
+    }
 
-        .place-link {
-            color: #333;
-            text-decoration: none;
-            padding: 5px 10px;
-            border: 1px solid #333;
-            border-radius: 5px;
-        }
-
-        .place-link:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #ffd700; /* Yellow color */
-            color: #333;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
-    <script>
-        function searchPlaces() {
-            const searchInput = document.getElementById('search-input').value.toLowerCase();
-            const places = document.querySelectorAll('.place');
-
-            places.forEach(place => {
-                const title = place.querySelector('.place-title').textContent.toLowerCase();
-                const description = place.querySelector('.place-description').textContent.toLowerCase();
-
-                if (title.includes(searchInput) || description.includes(searchInput)) {
-                    place.style.display = 'block';
-                } else {
-                    place.style.display = 'none';
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchInput = document.getElementById('search-input');
-            searchInput.addEventListener('input', searchPlaces);
-        });
-    </script>
+    /* Footer */
+    footer {
+        background-color: #ffd700; /* Yellow color */
+        color: #333;
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
 </head>
-
 <body>
     <header>
         <h1 class="title">Places to Visit</h1>
         <a href="index.html" class="home-btn">Home</a>
-        <div class="search-container">
-            <input type="text" id="search-input" class="search-input" placeholder="Search...">
-        </div>
+        <a href="#" class="search-btn">Search</a>
     </header>
-
     <section class="places">
         <div class="place">
             <img src="stecci.png" alt="Stecci" class="place-img">
             <h2 class="place-title">Stećci</h2>
             <p class="place-description">Stećci su srednjovjekovni nadgrobni spomenici...</p>
             <div class="place-links">
+                <a href="https://www.nekropola.ba/bs/featured/gorsic-polje" target="_blank" class="place-link">Website</a>
                 <a href="https://www.google.com/maps?q=43.666667,18.966667" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <div class="place">
             <img src="bijelevode.jpg" alt="Bijelevode" class="place-img">
             <h2 class="place-title">Bijele Vode</h2>
             <p class="place-description">Bijele Vode</p>
             <div class="place-links">
+                <a href="https://www.bijelevode.ba/" target="_blank" class="place-link">Website</a>
                 <a href="https://www.google.com/maps?q=44.071733,17.984119" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
+        <!-- Add more places -->
         <!-- Add more places -->
         <div class="place">
             <img src="splav.png" alt="Splav" class="place-img">
             <h2 class="place-title">Splavarenje na Drini</h2>
             <p class="place-description">Splavarenje na Drini je nezaboravno iskustvo koje će vam pružiti priliku da istražite prirodnu ljepotu ove rijeke.</p>
             <div class="place-links">
+                <a href="https://sarajevo.travel/ba/tekst/splavarenje-na-drini/242" target="_blank" class="place-link">Website</a>
                 <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
             <img src="ribolov.png" alt="Ribolov" class="place-img">
             <h2 class="place-title">Ribolov na Drini</h2>
             <p class="place-description">Ribolov na Drini je popularna aktivnost koju možete uživati na ovom prekrasnom rijeci.</p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
             <img src="zanj.png" alt="Žanj" class="place-img">
             <h2 class="place-title">Žanj</h2>
             <p class="place-description">Žanj je plaža </p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
             <img src="rorovi.png" alt="Rorovi" class="place-img">
             <h2 class="place-title">Rorovi</h2>
             <p class="place-description">Izletište i vidikovac</p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
             <img src="bazeni.png" alt="Bazeni" class="place-img">
             <h2 class="place-title">Bazeni</h2>
             <p class="place-description">Bazeni....</p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
-            <img src="crkvina.png" alt="Crkvina" class="place-img">
-            <h2 class="place-title">Crkvina</h2>
-            <p class="place-description">Crkvina je....</p>
+            <img src="omladinska.jpeg" alt="Omladinska" class="place-img">
+            <h2 class="place-title">Omladinska ulica</h2>
+            <p class="place-description">Omladinska ulica je šetalište sa prelijepim pogledom na Drinu, sa mnogo prirode, jedne od rijetko očuvanih u centru grada.... </p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.654444,18.978611" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
-            <img src="raca.png" alt="Manastir Rača" class="place-img">
-            <h2 class="place-title">Manastir Rača</h2>
-            <p class="place-description">Manastir Rača je pravoslavni manastir iz 13. vijeka...</p>
+            <img src="kajserija.jpg" alt="Džamija" class="place-img">
+            <h2 class="place-title">Kajserija Džamija</h2>
+            <p class="place-description">Kajserija Džamija je povijesna džamija, Goraždanska ljepotica....</p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=43.972222,19.565278" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
-
+    
         <!-- Add more places -->
         <div class="place">
-            <img src="tvrdos.png" alt="Manastir Tvrdoš" class="place-img">
-            <h2 class="place-title">Manastir Tvrdoš</h2>
-            <p class="place-description">Manastir Tvrdoš je pravoslavni manastir iz 4. vijeka...</p>
+            <img src="kvad.png" alt="Kvad" class="place-img">
+            <h2 class="place-title">Vožnja Kvadova</h2>
+            <p class="place-description">Vožnja kvadovima je uzbudljiva avantura koja će vam omogućiti istraživanje okolnog terena.</p>
             <div class="place-links">
-                <a href="https://www.google.com/maps?q=42.7125,18.346111" target="_blank" class="place-link">Google Maps</a>
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="somobor.jpg" alt="Somobor" class="place-img">
+            <h2 class="place-title">Samobor na Drini</h2>
+            <p class="place-description">Samobor...</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="turbe.png" alt="Turbe" class="place-img">
+            <h2 class="place-title">Turbe</h2>
+            <p class="place-description">Turbe je povijesni spomenik koji datira iz srednjeg vijeka.</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="rimski.png" alt="Most" class="place-img">
+            <h2 class="place-title">Rimski Most</h2>
+            <p class="place-description">Rimski most je povijesna građevina iz antičkog doba....</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="mostispodmosta.jpeg" alt="Most ispod mosta" class="place-img">
+            <h2 class="place-title">Most ispod Mosta</h2>
+            <p class="place-description">Most ispod mosta je u ratu značio....</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="galerija.jpg" alt="Galerija" class="place-img">
+            <h2 class="place-title">Galerija</h2>
+            <p class="place-description">Najstarija građevina iz Austro-Ugarskog doba...</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="mucenice.jpeg" alt="Mućenice" class="place-img">
+            <h2 class="place-title">Spomenik Drinskih Mučenica</h2>
+            <p class="place-description">U Vatikanu su proglašene kao blažene....</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="djozo.jpg" alt="Đožo" class="place-img">
+            <h2 class="place-title">O.Š."Husein ef. Đozo"</h2>
+            <p class="place-description">Danas osnovna škola, a nekad....</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="drinske.jpg" alt="Drinske" class="place-img">
+            <h2 class="place-title">Crkva Drinskih Mučenica</h2>
+            <p class="place-description">Katolička crkva</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="sejo.jpg" alt="Sejo" class="place-img">
+            <h2 class="place-title">Ranč porodice Brajlović</h2>
+            <p class="place-description">Kod Seja</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="zupcici.jpg" alt="Župčići" class="place-img">
+            <h2 class="place-title">Župčići</h2>
+            <p class="place-description">Izletište</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="sadba.jpg" alt="Sadba" class="place-img">
+            <h2 class="place-title">Sadba</h2>
+            <p class="place-description">Izletište</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="gubavica.jpg" alt="Gubavica" class="place-img">
+            <h2 class="place-title">Gubavica</h2>
+            <p class="place-description">Vidikovac...</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
+            </div>
+        </div>
+    
+        <!-- Add more places -->
+        <div class="place">
+            <img src="basa.jpg" alt="Basa" class="place-img">
+            <h2 class="place-title">Kod Baše</h2>
+            <p class="place-description">restoran...</p>
+            <div class="place-links">
+                <a href="#" target="_blank" class="place-link">Website</a>
+                <a href="#" target="_blank" class="place-link">Google Maps</a>
             </div>
         </div>
     </section>
-
+    
     <footer>
-        <p>© 2024 Festival of Friendship. All rights reserved.</p>
+        <p>&copy; 2024 - Goražde</p>
     </footer>
 </body>
-
 </html>
