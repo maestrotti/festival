@@ -64,7 +64,7 @@
             font-size: 1rem;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #666;
+            color: #666; /* General paragraph style */
         }
     
         /* Stiliranje dugmadi */
@@ -99,19 +99,63 @@
             width: 100%;
         }
     
-        /* Responsivni stilovi */
+        /* Responsive styles */
         @media only screen and (max-width: 600px) {
-            .title {
-                font-size: 1.5rem;
+            .logo img {
+                max-width: 80px; /* Adjust logo size for mobile */
             }
     
-            .subtitle {
-                font-size: 1.2rem;
+            .flags img {
+                max-width: 40px;
+                margin: 2px; /* Reduce spacing between flags */
             }
     
-            .btn {
-                font-size: 0.9rem;
+            .flags {
+                overflow-x: auto; /* Enable horizontal scrolling for flags */
             }
+        }
+    
+        /* Additional styling */
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    
+        .place {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: calc(50% - 20px); /* Two columns on larger screens */
+            border-radius: 5px;
+        }
+    
+        .place img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    
+        .place-description {
+            color: #666;
         }
     </style>
 </head>
