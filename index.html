@@ -3,221 +3,109 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOURIST GUIDE Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Common styles */
+        /* Resetiranje stilova */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
     
-        /* Body */
+        /* Osnovni stil tijela i fonta */
         body {
-            font-family: 'Roboto', Arial, sans-serif;
-            background-color: #f0f0f0; /* Light gray background */
-            color: #333;
-            font-size: 16px;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
     
         /* Header */
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
             text-align: center;
+            padding: 20px 0;
         }
     
-        /* Title */
+        /* Naslov */
         .title {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
         }
     
         /* Logo */
         .logo img {
             max-width: 100px;
+            height: auto;
         }
     
-        /* Sponsor */
-        .sponsor img {
-            max-width: 150px;
-            margin-top: 10px;
-        }
-    
-        /* Flags */
-        .flags {
-            overflow-x: auto;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-        }
-    
-        .flags img {
-            max-width: 40px;
-            margin: 0 5px;
-        }
-    
-        /* Activities, Out, Shopping, Eat, Events, Program */
-        .activities,
-        .out,
-        .shopping,
-        .eat,
-        .events,
-        .program,
-        .outings,
-        .sports {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-    
-        /* Subtitle */
+        /* Stil podnaslova */
         .subtitle {
             color: #ff1493;
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
     
-        /* Button style */
-        .visit-btn,
-        .sleep-btn,
-        .out-btn,
-        .shopping-btn,
-        .eat-btn,
-        .events-btn,
-        .program-btn,
-        .outings-btn,
-        .sports-btn {
+        /* Opći stil paragrafa */
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+    
+        /* Stiliranje dugmadi */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #ff1493;
             color: #fff;
-            padding: 10px 20px;
-            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            margin-bottom: 10px; /* Add some space below buttons */
-            display: inline-block;
-            margin: 0 auto;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            font-size: 1rem;
         }
     
-        .visit-btn:hover,
-        .sleep-btn:hover,
-        .out-btn:hover,
-        .shopping-btn:hover,
-        .eat-btn:hover,
-        .events-btn:hover,
-        .program-btn:hover,
-        .outings-btn:hover,
-        .sports-btn:hover {
+        .btn:hover {
             background-color: #ff69b4;
         }
     
-        /* Responsive styles */
-        @media only screen and (max-width: 600px) {
-            .logo img {
-                max-width: 80px; /* Adjust logo size for mobile */
-            }
-    
-            .flags img {
-                max-width: 40px;
-                margin: 2px; /* Reduce spacing between flags */
-            }
-    
-            .flags {
-                overflow-x: auto; /* Enable horizontal scrolling for flags */
-            }
-    
-            .visit-images img,
-            .out-images img,
-            .shopping-images img,
-            .eat-images img,
-            .outing-images img,
-            .sports-images img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
-                margin-bottom: 5px; /* Add spacing between images */
-            }
-        }
-    
-        /* Additional styling */
-        .image-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-    
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 10px 0;
             background-color: #333;
             color: #fff;
-        }
-    
-        /* New styles for index.html */
-        .places {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            margin-top: 60px;
-        }
-    
-        .place {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 15px;
-            width: calc(50% - 20px); /* Two columns on larger screens */
-            border-radius: 5px;
-        }
-    
-        .place img {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            border-radius: 5px;
         }
     
-        .place-title {
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
+        /* Responsivni stilovi */
+        @media only screen and (max-width: 600px) {
+            .title {
+                font-size: 1.5rem;
+            }
     
-        .place-description {
-            color: #666;
-        }
+            .subtitle {
+                font-size: 1.2rem;
+            }
     
-        .place-links {
-            margin-top: 10px;
-        }
-    
-        .place-link {
-            display: block;
-            margin-bottom: 5px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-    
-        .place-link:hover {
-            color: #007bff;
+            .btn {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -230,109 +118,72 @@
         <h1 class="title">TOURIST GUIDE Goražde</h1>
     </header>
 
-    <section class="flags">
-        <img src="bosna.png" alt="Flag 1">
-        <img src="france.png" alt="Flag 2">
-        <img src="turska.jpeg" alt="Flag 1">
-        <img src="sved.png" alt="Flag 2">
-        <img src="maced.png" alt="Flag 2">
-        <img src="spain.png" alt="Flag 1">
-        <img src="cro.png" alt="Flag 1">
-        <img src="italy.png" alt="Flag 2">
-        <img src="swiss.png" alt="Flag 1">
-        <img src="srb.jpeg" alt="Flag 2">
-        <img src="austria.png" alt="Flag 1">
-        <img src="crna.png" alt="Flag 2">
-        <img src="slovenia.png" alt="Flag 2">
-        <img src="germ.png" alt="Flag 1">
-        <img src="usa.png" alt="Flag 2">
-    </section>
+    <main>
+        <section class="flags">
+            <!-- Flags section -->
+        </section>
 
-    <section class="activities">
-        <h2 class="subtitle">What to Visit?</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-            Gorazde, a hero city in eastern Bosnia, the only BiH city on the Drina that managed to defend itself in the last war, and today a true small economic miracle.</br>
+        <section class="activities">
+            <h2 class="subtitle">What to Visit?</h2>
+            <p>
+                Explore the beauty of Goražde, a historic city nestled on the banks of the Drina River. From medieval cemeteries to vibrant cafes, there's something for everyone.
+            </p>
+            <a href="visit.html" class="btn">See More</a>
+        </section>
 
-            For a long time, this small town flourished as a stop on the trade route that led from Serbia and Montenegro to Sarajevo. The Drina is a favorite place for swimming and rafting, so cafes and restaurants on the banks of the river are always full.</br>
+        <section class="out">
+            <h2 class="subtitle">Where to Spend the Night?</h2>
+            <p>
+                Discover comfortable accommodations in Goražde, ranging from hotels to cozy guesthouses. Experience true hospitality during your stay.
+            </p>
+            <a href="sleep.html" class="btn">See More</a>
+        </section>
 
-            South of Gorazde is one of the largest medieval cemeteries in the country. It is assumed that there are about 600 medieval tombstones in one cemetery on the hillside.
-        </p>
-        <button class="visit-btn" onclick="location.href='visit.html'">See More</button>
-    </section>
-    
-    <section class="out">
-        <h2 class="subtitle">Where to Spend the Night?</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-            
-        In Gorazde, you have various options for accommodation, including hotels, guesthouses, private apartments, and similar. 
-        Many of them offer comfortable accommodation and hospitality that will enhance your stay in this city.
-        </p>
-        <div class="out-images">
-            <!-- Add images -->
-        </div>
-        <button class="sleep-btn" onclick="location.href='sleep.html'">See More</button>
-    </section>
+        <section class="shopping">
+            <h2 class="subtitle">Shopping</h2>
+            <p>
+                Explore local shops and boutiques offering unique products. Enjoy shopping in Goražde with diverse options to suit your taste.
+            </p>
+            <a href="shopping.html" class="btn">See More</a>
+        </section>
 
-    <section class="shopping">
-        <h2 class="subtitle">Shopping</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-        In Goražde, you can find diverse shops and boutiques offering a wide range of products. Explore local stores and enjoy shopping in this vibrant city.
-        </p>
-        <div class="shopping-images">
-            <!-- Add images -->
-        </div>
-        <button class="shopping-btn" onclick="location.href='shopping.html'">See More</button>
-    </section>
+        <section class="eat">
+            <h2 class="subtitle">What to Eat?</h2>
+            <p>
+                Indulge in traditional Bosnian cuisine and international dishes at restaurants and cafes in Goražde. Taste the flavors of the region.
+            </p>
+            <a href="eat.html" class="btn">See More</a>
+        </section>
 
-    <section class="eat">
-        <h2 class="subtitle">What to Eat?</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-            In Goražde, you can enjoy a diverse gastronomy that caters to everyone's taste. Restaurants, cafes, and bakeries offer authentic local specialties such as ćevapi, burek, and pizzas, as well as international cuisines. 
-            Try traditional dishes and refreshing meals for a complete culinary experience.
-        </p>
-        <div class="eat-images">
-            <!-- Add images -->
-        </div>
-        <button class="eat-btn" onclick="location.href='eat.html'">See More</button>
-    </section>
-    
-    <section class="outings">
-        <h2 class="subtitle">Where to Go Out?</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-        Experience the lively atmosphere of Goražde with numerous cafes, bars, and clubs offering diverse entertainment and nightlife.
-        </p>
-        <div class="outing-description">
-            <!-- Add outing description -->
-        </div>
-        <button class="outings-btn" onclick="location.href='outings.html'">See More</button>
-    </section>
+        <section class="outings">
+            <h2 class="subtitle">Where to Go Out?</h2>
+            <p>
+                Experience the vibrant nightlife of Goražde with cafes, bars, and clubs offering entertainment for every taste.
+            </p>
+            <a href="outings.html" class="btn">See More</a>
+        </section>
 
-    <section class="sports">
-        <h2 class="subtitle">Sports Activities</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-            Goražde offers various sports activities for enthusiasts. Whether you enjoy hiking, cycling, or water sports, there's something for everyone.
-        </p>
-        <div class="sports-images">
-            <!-- Add images -->
-        </div>
-        <button class="sports-btn" onclick="location.href='sports.html'">See More</button>
-    </section>
-    
-    <section class="events">
-        <h2 class="subtitle">Events</h2>
-        <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
-    Discover the beauty of Goražde along the banks of the Drina River, the perfect spot for excursions and relaxation. Enjoy riverside walks, picnics by the shore, and various water activities that make this city an ideal tourist destination.
-    </p>
-        <div class="event-description">
-            <!-- Add event description -->
-        </div>
-        <button class="events-btn" onclick="location.href='events.html'">See More</button>
-    </section>
-  
-    <section class="program">
-        <h2 class="subtitle">Festival Program</h2>
-        <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="program-btn" target="_blank">Download Program</a>
-    </section>
+        <section class="sports">
+            <h2 class="subtitle">Sports Activities</h2>
+            <p>
+                Enjoy outdoor activities in Goražde, including hiking, cycling, and water sports. Explore the natural beauty of the region.
+            </p>
+            <a href="sports.html" class="btn">See More</a>
+        </section>
+
+        <section class="events">
+            <h2 class="subtitle">Events</h2>
+            <p>
+                Discover cultural events and festivals in Goražde. Experience the local traditions and celebrations along the Drina River.
+            </p>
+            <a href="events.html" class="btn">See More</a>
+        </section>
+
+        <section class="program">
+            <h2 class="subtitle">Festival Program</h2>
+            <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="btn" target="_blank">Download Program</a>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 - Goražde</p>
