@@ -8,6 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
@@ -46,39 +47,52 @@
             background-color: #555;
         }
 
-        .content {
-            padding: 60px 20px 20px; /* Adjusted padding for space around the content */
-        }
-
-        .section {
-            background-color: #f0f0f0;
-            margin: 20px 0;
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             padding: 20px;
-            border-radius: 5px;
+            margin-top: 60px;
+        }
+
+        .place {
+            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: calc(50% - 20px);
+            border-radius: 5px;
+            text-align: center; /* Centriranje teksta */
         }
 
-        .section img {
-            max-width: 100%;
-            height: auto;
+        .place img {
+            width: 100%;
             border-radius: 5px;
         }
 
-        .learn-more-btn {
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .place-description {
+            color: #666;
+        }
+
+        .place-links {
+            margin-top: 10px;
+        }
+
+        .place-link {
             display: block;
-            width: 150px;
-            margin: 20px auto;
-            padding: 10px;
-            text-align: center;
+            margin-bottom: 5px;
             text-decoration: none;
-            color: #fff;
-            background-color: #333;
-            border-radius: 5px;
-            border: 1px solid #333;
+            color: #333;
+            font-weight: bold;
         }
 
-        .learn-more-btn:hover {
-            background-color: #555;
+        .place-link:hover {
+            color: #007bff;
         }
 
         footer {
@@ -89,6 +103,16 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .places {
+                padding: 10px;
+            }
+
+            .place {
+                width: calc(100% - 20px);
+            }
         }
     </style>
 </head>
