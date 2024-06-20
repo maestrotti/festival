@@ -208,17 +208,31 @@
             margin: 0 auto;
             width: 50%; /* Adjust as needed */
         }
+        .header-background {
+    background-image: url('gorazde.jpg'); /* Dodavanje slike pozadine */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 0; /* Podešavanje prostora unutar headera */
+}
+
+.title {
+    color: #ffd700; /* Žuta boja teksta */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Dodavanje sjene za bolju vidljivost */
+}
+
     </style>
 </head>
 
 <body>
-    <header>
+    <header class="header-background">
         <h1 class="title">TOURIST GUIDE Goražde</h1>
         <img src="grad.png" alt="Logo" class="logo top-left">
         <img src="grad.png" alt="Logo" class="logo top-right">
         <img src="grad.png" alt="Logo" class="logo bottom-left">
         <img src="grad.png" alt="Logo" class="logo bottom-right">
     </header>
+    
 
     <main>
         <section class="flags">
