@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +12,43 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
         }
+
         h1 {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .shopping-center {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            text-align: center; /* Center the content */
+            text-align: center;
         }
+
         .shopping-center img {
-            max-width: 80%; /* Reduce image size */
+            max-width: 80%;
             height: auto;
-            margin-bottom: 10px;
-            display: block; /* Center the image */
-            margin: 0 auto; /* Center the image */
+            display: block;
+            margin: 0 auto 10px auto;
         }
+
         .address {
             font-style: italic;
         }
+
         .map-container {
             margin-top: 20px;
             position: relative;
             overflow: hidden;
-            padding-top: 40%; /* Reduce map container height */
+            padding-top: 40%;
         }
+
         .map-container iframe {
             position: absolute;
             top: 0;
@@ -50,33 +57,33 @@
             height: 100%;
             border: 0;
         }
-        /* Stil za gumb "Home" */
-.home-btn {
-    position: fixed; /* Održava gumb na fiksnoj poziciji na ekranu */
-    bottom: 20px; /* Odmak od donjeg dijela ekrana */
-    left: 50%; /* Postavljanje na sredinu horizontalno */
-    transform: translateX(-50%); /* Centriranje */
-    background-color: #4caf50; /* Boja pozadine */
-    color: #fff; /* Boja teksta */
-    padding: 10px 20px; /* Unutrašnje margine */
-    font-size: 18px; /* Veličina fonta */
-    border: none; /* Bez okvira */
-    border-radius: 5px; /* Zaobljeni rubovi */
-    cursor: pointer; /* Promjena kursora na pokazivač */
-    transition: background-color 0.3s; /* Glatki prijelaz boje */
-    z-index: 1000; /* Održava gumb iznad sadržaja */
-}
 
-.home-btn:hover {
-    background-color: #45a049; /* Promjena boje pozadine pri prelasku mišem */
-}
+        .home-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1000;
+        }
 
+        .home-btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Shopping Centers</h1>
-        
+
         <div class="shopping-center">
             <h2>BINGO Hypermarket</h2>
             <img src="bingo.png" alt="BINGO Hypermarket">
@@ -95,9 +102,10 @@
             </div>
         </div>
 
-        <!-- Add more shopping centers as needed -->
-        
-        <a href="index.html" class="home-button">Home</a>
+        <!-- Dodaj više centara za kupovinu po potrebi -->
     </div>
+
+    <button class="home-btn" onclick="location.href='index.html'">Home</button>
 </body>
+
 </html>
