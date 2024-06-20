@@ -31,21 +31,26 @@
             font-size: 1.5em;
             text-transform: uppercase;
         }
+/* Stil za gumb "Home" */
+.home-btn {
+    position: fixed; /* Održava gumb na fiksnoj poziciji na ekranu */
+    bottom: 20px; /* Odmak od donjeg dijela ekrana */
+    left: 50%; /* Postavljanje na sredinu horizontalno */
+    transform: translateX(-50%); /* Centriranje */
+    background-color: #4caf50; /* Boja pozadine */
+    color: #fff; /* Boja teksta */
+    padding: 10px 20px; /* Unutrašnje margine */
+    font-size: 18px; /* Veličina fonta */
+    border: none; /* Bez okvira */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    cursor: pointer; /* Promjena kursora na pokazivač */
+    transition: background-color 0.3s; /* Glatki prijelaz boje */
+    z-index: 1000; /* Održava gumb iznad sadržaja */
+}
 
-        .home-btn,
-        .search-btn {
-            text-decoration: none;
-            color: #fff;
-            padding: 5px 10px;
-            border: 1px solid #fff;
-            margin-left: 10px;
-            border-radius: 5px;
-        }
-
-        .home-btn:hover,
-        .search-btn:hover {
-            background-color: #555;
-        }
+.home-btn:hover {
+    background-color: #45a049; /* Promjena boje pozadine pri prelasku mišem */
+}
 
         .places {
             display: flex;

@@ -35,20 +35,27 @@
             margin-bottom: 20px;
         }
 
-        .home-btn {
-            color: #fff; /* White color */
-            text-decoration: none;
-            padding: 5px 10px;
-            border: 2px solid #fff; /* White color */
-            border-radius: 5px;
-            margin-top: 10px;
-            display: inline-block;
-        }
+        /* Stil za gumb "Home" */
+.home-btn {
+    position: fixed; /* Održava gumb na fiksnoj poziciji na ekranu */
+    bottom: 20px; /* Odmak od donjeg dijela ekrana */
+    left: 50%; /* Postavljanje na sredinu horizontalno */
+    transform: translateX(-50%); /* Centriranje */
+    background-color: #4caf50; /* Boja pozadine */
+    color: #fff; /* Boja teksta */
+    padding: 10px 20px; /* Unutrašnje margine */
+    font-size: 18px; /* Veličina fonta */
+    border: none; /* Bez okvira */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    cursor: pointer; /* Promjena kursora na pokazivač */
+    transition: background-color 0.3s; /* Glatki prijelaz boje */
+    z-index: 1000; /* Održava gumb iznad sadržaja */
+}
 
-        .home-btn:hover {
-            background-color: #fff; /* White color */
-            color: #4caf50; /* Green color */
-        }
+.home-btn:hover {
+    background-color: #45a049; /* Promjena boje pozadine pri prelasku mišem */
+}
+
 
         /* Food */
         .food {
