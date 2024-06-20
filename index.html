@@ -187,14 +187,19 @@
             width: 50%; /* Adjust as needed */
         }
     
-        /* Background slika za header */
         .header-background {
     background-image: url('razdego2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px 0;
-    height: 600px; /* Povećajte visinu slike prema potrebi */
+    height: 400px; /* Prilagodite visinu prema potrebi */
+}
+
+@media only screen and (max-width: 600px) {
+    .header-background {
+        height: 200px; /* Prilagodite visinu za mobilne uređaje */
+    }
 }
 
 
