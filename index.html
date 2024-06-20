@@ -102,6 +102,21 @@
             position: relative; /* Promijenjeno iz fixed */
             width: 100%;
             margin-top: 40px; /* Dodavanje razmaka od sadržaja */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .footer-logo-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .footer-logo {
+            height: 50px;
         }
     
         /* Responsive styles */
@@ -113,7 +128,7 @@
             .btn {
                 padding: 8px 16px; /* Prilagodba veličine dugmadi za mobilne uređaje */
             }
-
+    
             .place {
                 width: calc(100% - 20px); /* Jedan stupac na manjim ekranima */
             }
@@ -163,7 +178,7 @@
         .place-description {
             color: #666;
         }
-
+    
         /* Stil za male logotipe u ćoškovima */
         .logo {
             position: absolute;
@@ -171,27 +186,35 @@
             height: 50px;
             z-index: 10;
         }
-
+    
         .logo.top-left {
             top: 0;
             left: 0;
         }
-
+    
         .logo.top-right {
             top: 0;
             right: 0;
         }
-
+    
         .logo.bottom-left {
             bottom: 0;
             left: 0;
         }
-
+    
         .logo.bottom-right {
             bottom: 0;
             right: 0;
         }
+    
+        /* Centriranje dugmeta ispod naslova "Sportske aktivnosti" */
+        .sports .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
+    
 </head>
 
 <body>
