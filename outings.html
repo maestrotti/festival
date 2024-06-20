@@ -165,6 +165,16 @@
         .contact-info {
             margin-bottom: 10px;
         }
+
+        /* Stil za linkove brojeva telefona */
+        .phone-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .phone-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -235,9 +245,9 @@
                 "Boomerang Club": { "address": "123 Main St, Goražde", "phone": "+1234567890", "email": "info@bumerangcafe.com" },
                 "Art Cafe": { "address": "456 Center St, Goražde", "phone": "+1234567891", "email": "info@artcafe.com" },
                 "San Cafe": { "address": "789 Park Ave, Goražde", "phone": "+1234567892", "email": "info@sancafe.com" },
-                "Carpe Diem Cafe": { "address": "101 Ocean Blvd, Goražde", "phone": "+1234567893", "email": "info@carpediemcafe.com" },
-                "M Cafe": { "address": "202 Lake Dr, Goražde", "phone": "+1234567894", "email": "info@mclub.com" },
-                "Selfie Cafe": { "address": "303 Sunset Rd, Goražde", "phone": "+1234567895", "email": "info@selfinightclub.com" }
+                "Carpe Diem Cafe": { "address": "321 Elm St, Goražde", "phone": "+1234567893", "email": "info@carpediemcafe.com" },
+                "M Cafe": { "address": "654 Broad St, Goražde", "phone": "+1234567894", "email": "info@mcafe.com" },
+                "Selfie Cafe": { "address": "987 Lakeview Dr, Goražde", "phone": "+1234567895", "email": "info@selfiecafe.com" }
                 // Dodaj ostale kontakte kako je potrebno
             };
 
@@ -246,7 +256,7 @@
                 var popup = document.getElementById('reservation-popup');
                 var contactInfoDiv = document.getElementById('contact-info');
                 contactInfoDiv.innerHTML = '<p><strong>Address:</strong> ' + info.address + '</p>' +
-                                           '<p><strong>Phone:</strong> ' + info.phone + '</p>' +
+                                           '<p><strong>Phone:</strong> <a href="tel:' + info.phone + '" class="phone-link">' + info.phone + '</a></p>' +
                                            '<p><strong>Email:</strong> ' + info.email + '</p>';
                 popup.style.display = 'block';
             } else {
