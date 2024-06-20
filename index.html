@@ -107,18 +107,6 @@
             align-items: center;
         }
     
-        .footer-logo-container {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-    
-        .footer-logo {
-            height: 50px;
-        }
-    
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .title {
@@ -182,8 +170,8 @@
         /* Stil za male logotipe u ćoškovima */
         .logo {
             position: absolute;
-            width: 50px; /* Mala veličina slike */
-            height: 50px;
+            width: 40px; /* Smanjena veličina slike */
+            height: 40px; /* Smanjena veličina slike */
             z-index: 10;
         }
     
@@ -207,19 +195,24 @@
             right: 0;
         }
     
-        /* Centriranje dugmeta ispod naslova "Sportske aktivnosti" */
+        /* Centriranje dugmeta ispod naslova "Sportske aktivnosti" bez širine preko cijelog */
         .sports .btn {
-            display: block;
+            display: inline-block;
             margin-left: auto;
             margin-right: auto;
         }
     </style>
+    
     
 </head>
 
 <body>
     <header>
         <h1 class="title">TOURIST GUIDE Goražde</h1>
+        <img src="grad.png" alt="Logo" class="logo top-left">
+        <img src="grad.png" alt="Logo" class="logo top-right">
+        <img src="grad.png" alt="Logo" class="logo bottom-left">
+        <img src="grad.png" alt="Logo" class="logo bottom-right">
     </header>
 
     <main>
@@ -288,11 +281,6 @@
         <p>&copy; 2024 - Goražde</p>
     </footer>
 
-    <!-- Logotipi u ćoškovima -->
-    <img src="grad.png" alt="Logo" class="logo top-left">
-    <img src="grad.png" alt="Logo" class="logo top-right">
-    <img src="grad.png" alt="Logo" class="logo bottom-left">
-    <img src="grad.png" alt="Logo" class="logo bottom-right">
 </body>
 
 </html>
