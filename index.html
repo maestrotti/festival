@@ -40,7 +40,6 @@
             letter-spacing: 2px;
             margin-bottom: 10px;
             font-family: 'Arial Black', sans-serif;
-            background-color: #ffcc00; /* Žuta pozadina naslova */
             color: #000; /* Crna boja teksta */
             padding: 10px 20px;
             border-radius: 10px;
@@ -59,6 +58,7 @@
             margin-bottom: 15px;
             font-family: 'Arial Black', sans-serif;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
         }
     
         /* Opći stil paragrafa */
@@ -67,6 +67,7 @@
             line-height: 1.8;
             margin-bottom: 20px;
             color: #fff; /* Bijela boja za tekst */
+            text-align: center; /* Centriranje teksta */
         }
     
         /* Stiliranje dugmadi */
@@ -84,6 +85,7 @@
             margin-top: 10px;
             font-size: 1rem;
             font-family: 'Arial Black', sans-serif;
+            text-align: center; /* Centriranje teksta u dugmetu */
         }
     
         .btn:hover {
@@ -96,9 +98,9 @@
             background-color: #333;
             color: #fff;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+            position: relative; /* Promijenjeno iz fixed */
             width: 100%;
+            margin-top: 40px; /* Dodavanje razmaka od sadržaja */
         }
     
         /* Responsive styles */
@@ -109,6 +111,10 @@
     
             .btn {
                 padding: 8px 16px; /* Prilagodba veličine dugmadi za mobilne uređaje */
+            }
+
+            .place {
+                width: calc(100% - 20px); /* Jedan stupac na manjim ekranima */
             }
         }
     
@@ -127,7 +133,7 @@
         .places {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center; /* Centriranje sekcija */
             padding: 20px;
             margin-top: 60px;
         }
@@ -139,6 +145,7 @@
             padding: 15px;
             width: calc(50% - 20px); /* Dva stupca na većim ekranima */
             border-radius: 5px;
+            text-align: center; /* Centriranje teksta */
         }
     
         .place img {
@@ -149,6 +156,7 @@
         .place-title {
             margin-top: 10px;
             font-size: 1.2em;
+            color: #000; /* Crna boja za naslov mjesta */
         }
     
         .place-description {
@@ -210,11 +218,10 @@
         <section class="sports">
             <h2 class="subtitle">Sportske aktivnosti</h2>
             <p>
-                U Goraždu zaigrajte Tenis, planinarite, uživajte u basketu, kajaku, malom nogometu i mnogim drugim sportovima
+                U Goraždu zaigrajte tenis, planinarite, uživajte u basketu, kajaku, malom nogometu i mnogim drugim sportovima.
             </p>
             <a href="sports.html" class="btn">Saznaj više</a>
         </section>
-
 
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
