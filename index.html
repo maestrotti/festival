@@ -7,85 +7,189 @@
     <title>TOURIST GUIDE Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Resetiranje stilova */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .title {
+    
+        /* Osnovni stil tijela i fonta */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #fff; /* Bijela boja za tekst */
             margin: 0;
-            font-size: 1.5em;
-            text-transform: uppercase;
+            padding: 0;
+            position: relative;
         }
-
-        .home-btn,
-        .search-btn {
-            text-decoration: none;
-            color: #fff;
-            padding: 5px 10px;
-            border: 1px solid #fff;
-            margin-left: 10px;
-            border-radius: 5px;
-        }
-
-        .home-btn:hover,
-        .search-btn:hover {
-            background-color: #555;
-        }
-
-        .content {
-            padding: 60px 20px 20px; /* Adjusted padding for space around the content */
-        }
-
-        .section {
-            background-color: #f0f0f0;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        footer {
+    
+        /* Header */
+        header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px 0;
             position: relative;
         }
-
-        footer img {
+    
+        /* Naslov */
+        .title {
+            font-size: 3rem; /* Povećan font za naslov */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-family: 'Arial Black', sans-serif;
+            color: #000; /* Crna boja teksta */
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+            display: inline-block; /* Da bi se smanjila širina naslova na potrebnu širinu teksta */
+        }
+    
+        /* Stil podnaslova */
+        .subtitle {
+            color: #ffd700; /* Žuta boja za podnaslove */
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    
+        /* Opći stil paragrafa */
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #fff; /* Bijela boja za tekst */
+            text-align: center; /* Centriranje teksta */
+        }
+    
+        /* Stiliranje dugmadi */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff1493;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-family: 'Arial Black', sans-serif;
+            text-align: center; /* Centriranje teksta u dugmetu */
+        }
+    
+        .btn:hover {
+            background-color: #ff69b4;
+        }
+    
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: relative; /* Promijenjeno iz fixed */
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
+            margin-top: 40px; /* Dodavanje razmaka od sadržaja */
+        }
+    
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .title {
+                font-size: 2rem; /* Prilagodba veličine naslova za mobilne uređaje */
+            }
+    
+            .btn {
+                padding: 8px 16px; /* Prilagodba veličine dugmadi za mobilne uređaje */
+            }
+
+            .place {
+                width: calc(100% - 20px); /* Jedan stupac na manjim ekranima */
+            }
+        }
+    
+        /* Dodatni stilovi */
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centriranje sekcija */
+            padding: 20px;
+            margin-top: 60px;
+        }
+    
+        .place {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: calc(50% - 20px); /* Dva stupca na većim ekranima */
+            border-radius: 5px;
+            text-align: center; /* Centriranje teksta */
+        }
+    
+        .place img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .place-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #000; /* Crna boja za naslov mjesta */
+        }
+    
+        .place-description {
+            color: #666;
         }
 
-        footer .content {
-            position: relative;
-            z-index: 1;
+        /* Stil za male logotipe u ćoškovima */
+        .logo {
+            position: absolute;
+            width: 50px; /* Mala veličina slike */
+            height: 50px;
+            z-index: 10;
+        }
+
+        .logo.top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .logo.top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .logo.bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .logo.bottom-right {
+            bottom: 0;
+            right: 0;
         }
     </style>
 </head>
