@@ -22,6 +22,7 @@
             color: #fff; /* Bijela boja za tekst */
             margin: 0;
             padding: 0;
+            position: relative;
         }
     
         /* Header */
@@ -162,6 +163,34 @@
         .place-description {
             color: #666;
         }
+
+        /* Stil za male logotipe u ćoškovima */
+        .logo {
+            position: absolute;
+            width: 50px; /* Mala veličina slike */
+            height: 50px;
+            z-index: 10;
+        }
+
+        .logo.top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .logo.top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .logo.bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .logo.bottom-right {
+            bottom: 0;
+            right: 0;
+        }
     </style>
 </head>
 
@@ -226,20 +255,21 @@
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
             <p>
-                Otkrijte kulturne događaje i festivale u Goraždu. Doživite lokalne tradicije i proslave uz rijeku Drinu.
+                Goražde je grad koji uvijek nudi nešto novo i uzbudljivo. Od kulturnih manifestacija do sportskih događaja, ovdje ćete pronaći događaje za svaki ukus.
             </p>
             <a href="events.html" class="btn">Saznaj više</a>
-        </section>
-
-        <section class="program">
-            <h2 class="subtitle">Program festivala</h2>
-            <a href="https://czkgorazde.ba/wp-content/uploads/2023/07/PROGRAM-XXVI-INTERNACIONALNOG-%E2%80%9EFESTIVALA-PRIJATELJSTVA-GORAZDE-2023.pdf" class="btn" target="_blank">Preuzmi program</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 - Goražde</p>
     </footer>
+
+    <!-- Logotipi u ćoškovima -->
+    <img src="logo.png" alt="Logo" class="logo top-left">
+    <img src="logo.png" alt="Logo" class="logo top-right">
+    <img src="logo.png" alt="Logo" class="logo bottom-left">
+    <img src="logo.png" alt="Logo" class="logo bottom-right">
 </body>
 
 </html>
