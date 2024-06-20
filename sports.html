@@ -24,7 +24,7 @@
 
         /* Header */
         header {
-            background-image: url('sports-header.jpg'); /* Add image for header background */
+            background-image: url('sport.jpg'); /* Add image for header background */
             background-size: cover;
             background-position: center;
             padding: 60px 20px;
@@ -41,14 +41,9 @@
             letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             transform: skew(-10deg);
-        }
-
-        /* Logo */
-        .logo img {
-            max-width: 100px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            background-color: rgba(255, 255, 255, 0.6); /* Add semi-transparent background */
+            display: inline-block;
+            padding: 10px;
         }
 
         /* Sports Content */
@@ -156,10 +151,9 @@
 <body>
     <header>
         <h1 class="title">Sports Activities</h1>
-        <div class="logo">
-            <!-- Uklonjena slika loga -->
-        </div>
     </header>
+
+    <button class="show-more-btn" onclick="location.href='index.html'" style="margin: 20px auto; display: block;">Home</button>
 
     <section class="sports-content">
         <h2 class="subtitle">Explore Sports in Goražde</h2>
@@ -170,10 +164,12 @@
             <!-- Dodane slike sportskih aktivnosti -->
             <img src="tenis.jpg" alt="Tennis" onclick="openModal('Tennis', '123 Tennis St, Goražde', '+1234567890')">
             <img src="fudbal.jpg" alt="Football" onclick="openModal('Football', '456 Football Ave, Goražde', '+1234567891')">
-            <img src="kosarka.jpeg" alt="Basketball" onclick="openModal('Basketball', '789 Basketball Blvd, Goražde', '+1234567892')">
+            <img src="kosarka.jpg" alt="Basketball" onclick="openModal('Basketball', '789 Basketball Blvd, Goražde', '+1234567892')">
             <img src="kajak.jpg" alt="Kayaking" onclick="openModal('Kayaking', '321 River Rd, Goražde', '+1234567893')">
             <img src="odbojka.jpg" alt="Volleyball" onclick="openModal('Volleyball', '654 Beachside Dr, Goražde', '+1234567894')">
             <img src="stolni.jpg" alt="Table Tennis" onclick="openModal('Table Tennis', '987 Pingpong Ln, Goražde', '+1234567895')">
+            <img src="planinarenje.jpg" alt="Hiking" onclick="openModal('Hiking', '111 Mountain Path, Goražde', '+1234567896')">
+            <img src="bicikl.jpeg" alt="Cycling" onclick="openModal('Cycling', '222 Cycling Trail, Goražde', '+1234567897')">
         </div>
         <p style="font-family: cursive; font-size: 18px; color: goldenrod; line-height: 1.5em;">
             Take advantage of the breathtaking nature surrounding Goražde and engage in outdoor adventures such as hiking and cycling. For those seeking excitement on the water, rafting and kayaking on the Drina River are popular options.
