@@ -99,10 +99,23 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        footer img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        footer .content {
+            position: relative;
+            z-index: 1;
         }
 
         @media (max-width: 768px) {
@@ -276,7 +289,7 @@
         </div>
 
         <div class="place">
-            <img src="mucenice.jpg" alt="Drinske mučenice" class="place-img">
+            <img src="mucenice.jpeg" alt="Drinske mučenice" class="place-img">
             <h2 class="place-title">Drinske mučenice</h2>
             <p class="place-description">Drinske mučenice...</p>
             <div class="place-links">
@@ -286,7 +299,7 @@
         </div>
 
         <div class="place">
-            <img src="mostispodmosta.jpg" alt="Most ispod mosta" class="place-img">
+            <img src="mostispodmosta.jpeg" alt="Most ispod mosta" class="place-img">
             <h2 class="place-title">Most ispod mosta</h2>
             <p class="place-description">Most ispod mosta...</p>
             <div class="place-links">
