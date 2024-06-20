@@ -22,12 +22,13 @@
         }
 
         header {
-            background-image: url('international.png');
+            background-image: url('gorazde.jpg'); /* Nova pozadinska slika */
             background-size: cover;
             background-position: center;
             padding: 60px 20px;
             text-align: center;
             position: relative;
+            filter: brightness(80%); /* Blijedija pozadina */
         }
 
         .title {
@@ -180,9 +181,6 @@
 <body>
     <header>
         <h1 class="title">Outings in Goražde</h1>
-        <div class="logo">
-            <img src="grad.png" alt="Your Logo">
-        </div>
     </header>
 
     <!-- Gumb "Home" -->
@@ -248,7 +246,7 @@
                 "Carpe Diem Cafe": { "address": "321 Elm St, Goražde", "phone": "+1234567893", "email": "info@carpediemcafe.com" },
                 "M Cafe": { "address": "654 Broad St, Goražde", "phone": "+1234567894", "email": "info@mcafe.com" },
                 "Selfie Cafe": { "address": "987 Lakeview Dr, Goražde", "phone": "+1234567895", "email": "info@selfiecafe.com" }
-                // Dodaj ostale kontakte kako je potrebno
+                // Dodaj ostale kontakte po potrebi
             };
 
             var info = contactInfo[placeName];
