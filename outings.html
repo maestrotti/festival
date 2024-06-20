@@ -1,100 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outings in Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Common styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        /* Ostatak tvojih stilova ostaje isti */
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e1eaee;
-            color: #333;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        header {
-            background-image: url('international.png');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .title {
-            color: #e91e63;
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transform: skew(-10deg);
-        }
-
-        .logo img {
-            max-width: 135px;
+        /* Stil za gumb "Home" */
+        .home-btn {
             position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .outings {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .subtitle {
-            color: #ff1493;
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-family: 'Arial Black', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transform: skew(-10deg);
-        }
-
-        .outing-description {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .outing {
-            width: 200px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .outing img {
-            width: 100%;
-            height: 200px; /* Definišemo istu visinu za sve slike */
-            object-fit: cover;
-        }
-
-        .outing-name {
-            background-color: #ff1493;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* Dodani stilovi za gumb "Home" i za "Rezervacije" */
-        .home-btn,
-        .reserve-btn {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: #4caf50;
             color: #fff;
             padding: 10px 20px;
@@ -103,21 +22,36 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+        }
+
+        /* Stil za "Reservations" prozorčić */
+        .reservation-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        /* Dodani stilovi za "Reservations" prozorčić */
+        .contact-info {
             margin-bottom: 10px;
         }
 
-        .home-btn:hover,
-        .reserve-btn:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-        }
     </style>
 </head>
-
 <body>
     <header>
         <h1 class="title">Outings in Goražde</h1>
@@ -126,6 +60,7 @@
         </div>
     </header>
 
+    <!-- Dodan gumb "Home" -->
     <button class="home-btn" onclick="location.href='index.html'">Home</button>
 
     <section class="outings">
@@ -134,35 +69,20 @@
             <div class="outing">
                 <img src="bumerang.png" alt="Boomerang Club">
                 <div class="outing-name">Boomerang Club</div>
-                <button class="reserve-btn" onclick="displayContactInfo('Boomerang Club')">Reservations</button>
+                <!-- Dodan onclick event za prikaz "Reservations" prozorčića -->
+                <button class="reserve-btn" onclick="openReservation('Boomerang Club')">Reservations</button>
             </div>
-            <div class="outing">
-                <img src="art.jpeg" alt="Art Cafe">
-                <div class="outing-name">Art Cafe</div>
-                <button class="reserve-btn" onclick="displayContactInfo('Art Cafe')">Reservations</button>
-            </div>
-            <div class="outing">
-                <img src="san.jpeg" alt="San Cafe">
-                <div class="outing-name">San Cafe</div>
-                <button class="reserve-btn" onclick="displayContactInfo('San Cafe')">Reservations</button>
-            </div>
-            <div class="outing">
-                <img src="carpe.png" alt="Carpe Diem Cafe">
-                <div class="outing-name">Carpe Diem Cafe</div>
-                <button class="reserve-btn" onclick="displayContactInfo('Carpe Diem Cafe')">Reservations</button>
-            </div>
-            <div class="outing">
-                <img src="m.png" alt="M Cafe">
-                <div class="outing-name">M Cafe</div>
-                <button class="reserve-btn" onclick="displayContactInfo('M Cafe')">Reservations</button>
-            </div>
-            <div class="outing">
-                <img src="selfi.png" alt="Selfi Nightclub">
-                <div class="outing-name">Selfie Cafe</div>
-                <button class="reserve-btn" onclick="displayContactInfo('Selfie Cafe')">Reservations</button>
-            </div>
+            <!-- Ostali outing elementi -->
         </div>
     </section>
+
+    <!-- Dodan "Reservations" prozorčić -->
+    <div id="reservation-popup" class="reservation-popup">
+        <span class="close-btn" onclick="closeReservation()">X</span>
+        <div class="contact-info" id="contact-info">
+            <!-- Sadržaj se generiše dinamički -->
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 - Goražde</p>
@@ -170,23 +90,28 @@
 
     <!-- Skripta za prikaz kontaktnih informacija -->
     <script>
-        function displayContactInfo(placeName) {
-            // Ovde možeš postaviti kontakt informacije za svako mesto
+        function openReservation(placeName) {
             var contactInfo = {
-                "Boomerang Cafe": { "phone": "+1234567890", "email": "info@bumerangcafe.com" },
-                "Art Cafe": { "phone": "+1234567891", "email": "info@artcafe.com" },
-                "San Cafe": { "phone": "+1234567892", "email": "info@sancafe.com" },
-                "Carpe Diem Cafe": { "phone": "+1234567893", "email": "info@carpediemcafe.com" },
-                "M cafe": { "phone": "+1234567894", "email": "info@mclub.com" },
-                "Selfie cafe": { "phone": "+1234567895", "email": "info@selfinightclub.com" }
+                "Boomerang Club": { "address": "123 Main St, Goražde", "phone": "+1234567890", "email": "info@bumerangcafe.com" },
+                // Dodaj ostale kontakte kako je potrebno
             };
 
             var info = contactInfo[placeName];
             if (info) {
-                alert("Phone: " + info.phone + "\nEmail: " + info.email);
+                var popup = document.getElementById('reservation-popup');
+                var contactInfoDiv = document.getElementById('contact-info');
+                contactInfoDiv.innerHTML = '<p><strong>Address:</strong> ' + info.address + '</p>' +
+                                           '<p><strong>Phone:</strong> ' + info.phone + '</p>' +
+                                           '<p><strong>Email:</strong> ' + info.email + '</p>';
+                popup.style.display = 'block';
             } else {
                 alert("Contact information not available.");
             }
+        }
+
+        function closeReservation() {
+            var popup = document.getElementById('reservation-popup');
+            popup.style.display = 'none';
         }
     </script>
 
@@ -205,5 +130,4 @@
         }
     </script>
 </body>
-
 </html>
