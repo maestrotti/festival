@@ -4,22 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VISIT Goražde</title>
+    <title>Visit Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Resetiranje stilova */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Osnovni stil tijela i fonta */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background-color: #f0f0f0;
             color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
         }
 
+        /* Header */
         header {
             position: relative;
             height: 400px;
@@ -30,6 +36,7 @@
             text-align: center;
         }
 
+        /* Video kao pozadina */
         .header-video {
             position: absolute;
             top: 0;
@@ -40,21 +47,24 @@
             z-index: 1;
         }
 
+        /* Naslov */
         .title {
             font-size: 3rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
             font-family: 'Georgia', serif;
+            color: #ffd700;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 2;
-            color: transparent;
-            background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
-            background-size: 200%;
+            display: inline-block;
+            text-align: center;
             animation: shimmer 3s linear infinite;
-            -webkit-background-clip: text;
+            background: linear-gradient(to right, #ffd700, #fff, #ffd700);
             background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
         @keyframes shimmer {
@@ -67,6 +77,7 @@
             }
         }
 
+        /* Stil podnaslova */
         .subtitle {
             color: #ff4500;
             font-size: 1.5rem;
@@ -78,6 +89,7 @@
             text-align: center;
         }
 
+        /* Opći stil paragrafa */
         p {
             font-size: 1rem;
             line-height: 1.8;
@@ -86,6 +98,7 @@
             text-align: center;
         }
 
+        /* Stiliranje dugmadi */
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -97,7 +110,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin: 10px auto;
+            margin-top: 10px;
             font-size: 1rem;
             font-family: 'Arial Black', sans-serif;
             text-align: center;
@@ -107,6 +120,7 @@
             background-color: #45a049;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             background-color: #333;
@@ -120,15 +134,13 @@
             align-items: center;
         }
 
+        /* Dodatni stilovi */
         .image-container {
             text-align: center;
             margin-bottom: 20px;
             overflow: hidden;
             position: relative;
             height: 300px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 5px;
         }
 
         .image-container img {
@@ -147,13 +159,7 @@
             opacity: 1;
         }
 
-        .places,
-        .out,
-        .shopping,
-        .eat,
-        .outings,
-        .sports,
-        .events {
+        .places {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -186,37 +192,16 @@
             color: #666;
         }
 
-        .logo {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: 10;
-        }
-
-        .logo.top-left {
-            top: 0;
-            left: 0;
-        }
-
-        .logo.top-right {
-            top: 0;
-            right: 0;
-        }
-
-        .logo.bottom-left {
-            bottom: 0;
-            left: 0;
-        }
-
-        .logo.bottom-right {
-            bottom: 0;
-            right: 0;
-        }
-
-        .sports .btn {
+        /* Centriranje dugmeta ispod naslova */
+        .activities .btn,
+        .out .btn,
+        .shopping .btn,
+        .eat .btn,
+        .outings .btn,
+        .sports .btn,
+        .events .btn {
             display: block;
             margin: 0 auto;
-            width: 50%;
         }
 
         @media only screen and (max-width: 600px) {
@@ -232,10 +217,8 @@
                 width: calc(100% - 20px);
             }
 
-            .sports .btn {
-                display: block;
-                margin: 0 auto;
-                width: 50%;
+            .image-container {
+                height: 200px;
             }
         }
     </style>
@@ -244,7 +227,7 @@
 <body>
     <header>
         <video class="header-video" src="razdegoo.mp4" autoplay loop muted></video>
-        <h1 class="title">Visit Gorazde</h1>
+        <h1 class="title">Visit Goražde</h1>
     </header>
 
     <main>
@@ -273,79 +256,75 @@
                 <img src="mucenice.jpeg" alt="Slika 20">
                 <img src="gorazde.jpg" alt="Slika 21">
             </div>
-            <p>Ovdje dodati uvodni text o Goraždu.</p>
+            <p>Ovdje dodati uvodni tekst o Goraždu.</p>
             <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="out">
             <h2 class="subtitle">Gdje prespavati?</h2>
             <div class="image-container">
-                <img src="hotel.png" alt="Slika 1" class="active">
-                <img src="kamp.jpg" alt="Slika 2">
-                <img src="apartman.jpg" alt="Slika 3">
-                <img src="hotel1.jpg" alt="Slika 4">
+                <img src="behar.jpg" alt="Slika 1" class="active">
+                <img src="casablanca.jpg" alt="Slika 2">
             </div>
-            <p>Pronađite najbolje mjesto za prespavati.</p>
-            <a href="#" class="btn">Pogledaj opcije</a>
+            <p>Tekst o prenoćištu u Goraždu</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="shopping">
-            <h2 class="subtitle">Gdje šopingovati?</h2>
+            <h2 class="subtitle">Šoping</h2>
             <div class="image-container">
-                <img src="bingo.jpg" alt="Slika 1" class="active">
+                <img src="bingo.png" alt="Slika 1" class="active">
                 <img src="konzum.jpg" alt="Slika 2">
-                <img src="robot.jpg" alt="Slika 3">
-                <img src="mall.jpg" alt="Slika 4">
             </div>
-            <p>Nabavite sve što vam je potrebno.</p>
-            <a href="#" class="btn">Šoping opcije</a>
+            <p>Tekst o šopingu u Goraždu.</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="eat">
             <h2 class="subtitle">Gdje jesti?</h2>
             <div class="image-container">
-                <img src="restoran1.jpg" alt="Slika 1" class="active">
-                <img src="restoran2.jpg" alt="Slika 2">
-                <img src="restoran3.jpg" alt="Slika 3">
-                <img src="restoran4.jpg" alt="Slika 4">
+                <img src="foto3.jpg" alt="Slika 1" class="active">
+                <img src="foto4.jpg" alt="Slika 2">
+                <img src="foto5.jpg" alt="Slika 3">
+                <img src="foto6.jpg" alt="Slika 4">
             </div>
-            <p>Otkrijte najbolja mjesta za jelo u Goraždu.</p>
-            <a href="#" class="btn">Pogledaj restorane</a>
+            <p>Tekst o restoranima i hrani u Goraždu.</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="outings">
-            <h2 class="subtitle">Izleti i aktivnosti</h2>
+            <h2 class="subtitle">Izleti</h2>
             <div class="image-container">
-                <img src="izlet1.jpg" alt="Slika 1" class="active">
-                <img src="izlet2.jpg" alt="Slika 2">
-                <img src="izlet3.jpg" alt="Slika 3">
-                <img src="izlet4.jpg" alt="Slika 4">
+                <img src="foto7.jpg" alt="Slika 1" class="active">
+                <img src="foto8.jpg" alt="Slika 2">
+                <img src="foto9.jpg" alt="Slika 3">
+                <img src="foto10.jpg" alt="Slika 4">
             </div>
-            <p>Organizujte izlete i aktivnosti na otvorenom.</p>
+            <p>Tekst o izletima i aktivnostima u Goraždu.</p>
             <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="sports">
             <h2 class="subtitle">Sportske aktivnosti</h2>
             <div class="image-container">
-                <img src="sport1.jpg" alt="Slika 1" class="active">
-                <img src="sport2.jpg" alt="Slika 2">
-                <img src="sport3.jpg" alt="Slika 3">
-                <img src="sport4.jpg" alt="Slika 4">
+                <img src="foto11.jpg" alt="Slika 1" class="active">
+                <img src="foto12.jpg" alt="Slika 2">
+                <img src="foto13.jpg" alt="Slika 3">
+                <img src="foto14.jpg" alt="Slika 4">
             </div>
-            <p>Uključite se u sportske aktivnosti.</p>
-            <a href="#" class="btn">Više o sportovima</a>
+            <p>Tekst o sportskim aktivnostima u Goraždu.</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
             <div class="image-container">
-                <img src="dogadjaj1.jpg" alt="Slika 1" class="active">
-                <img src="dogadjaj2.jpg" alt="Slika 2">
-                <img src="dogadjaj3.jpg" alt="Slika 3">
-                <img src="dogadjaj4.jpg" alt="Slika 4">
+                <img src="foto15.jpg" alt="Slika 1" class="active">
+                <img src="foto16.jpg" alt="Slika 2">
+                <img src="foto17.jpg" alt="Slika 3">
+                <img src="foto18.jpg" alt="Slika 4">
             </div>
-            <p>Pratite aktuelne događaje u Goraždu.</p>
+            <p>Tekst o događajima u Goraždu.</p>
             <a href="#" class="btn">Saznaj više</a>
         </section>
     </main>
@@ -355,16 +334,21 @@
     </footer>
 
     <script>
-        const images = document.querySelectorAll('.image-container img');
-        let currentImageIndex = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.image-container');
+            imageContainers.forEach(container => {
+                const images = container.querySelectorAll('img');
+                let currentImageIndex = 0;
 
-        function changeImage() {
-            images[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].classList.add('active');
-        }
+                function changeImage() {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
 
-        setInterval(changeImage, 3000);
+                setInterval(changeImage, 3000);
+            });
+        });
     </script>
 </body>
 
