@@ -27,11 +27,24 @@
     
         /* Header */
         header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
             position: relative;
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        /* Video kao pozadina */
+        .header-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
         }
     
         /* Naslov */
@@ -213,22 +226,6 @@
             width: 50%;
         }
     
-        .header-background {
-            background-image: url('razdego2.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 20px 0;
-            height: 400px;
-        }
-    
-        @media only screen and (max-width: 600px) {
-            .header-background {
-                height: 200px;
-            }
-        }
-    
-        /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .title {
                 font-size: 2rem;
@@ -254,12 +251,15 @@
 </head>
 
 <body>
-    <header class="header-background">
-        <h1 class="title">VISIT Goražde</h1>
+    <header>
+        <video class="header-video" src="razdegoo.mp4" autoplay loop muted></video>
+        <h1 class="title">Visit Gorazde</h1>
     </header>
+    
 
     <main>
         
+     
         <section class="activities">
             <h2 class="subtitle">Šta posjetiti?</h2>
             <div class="image-container">
@@ -286,6 +286,7 @@
                 <img src="gorazde.jpg" alt="Slika 21">
             </div>
             <p>Ovdje dodati uvodni text o Goraždu.</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
         
         
