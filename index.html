@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOURIST GUIDE Goražde</title>
+    <title>VISIT Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Resetiranje stilova */
@@ -18,8 +18,8 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #000;
-            color: #fff; /* Bijela boja za tekst */
+            background-color: #f0f0f0;
+            color: #333;
             margin: 0;
             padding: 0;
             position: relative;
@@ -36,25 +36,36 @@
     
         /* Naslov */
         .title {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    font-family: 'Arial Black', sans-serif;
-    color: #ffd700; /* Žuta boja teksta */
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Dodavanje sjene za bolju vidljivost */
-    position: relative;
-    z-index: 2;
-    display: inline-block; /* Da bi se smanjila širina naslova na potrebnu širinu teksta */
-    text-align: center; /* Centriranje teksta */
-}
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+            color: #ffd700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            text-align: center;
+            background: linear-gradient(to right, #ffd700 20%, #fff 40%, #ffd700 60%);
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+        }
 
+        @keyframes shimmer {
+            0% {
+                background-position: 200% center;
+            }
+            100% {
+                background-position: -200% center;
+            }
+        }
     
         /* Stil podnaslova */
         .subtitle {
-            color: #ffd700; /* Žuta boja za podnaslove */
+            color: #ff4500;
             font-size: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -69,15 +80,15 @@
             font-size: 1rem;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #fff; /* Bijela boja za tekst */
-            text-align: center; /* Centriranje teksta */
+            color: #333;
+            text-align: center;
         }
     
         /* Stiliranje dugmadi */
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #ff1493;
+            background-color: #4CAF50;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
@@ -88,11 +99,11 @@
             margin-top: 10px;
             font-size: 1rem;
             font-family: 'Arial Black', sans-serif;
-            text-align: center; /* Centriranje teksta u dugmetu */
+            text-align: center;
         }
     
         .btn:hover {
-            background-color: #ff69b4;
+            background-color: #45a049;
         }
     
         /* Footer */
@@ -101,9 +112,9 @@
             background-color: #333;
             color: #fff;
             padding: 10px 0;
-            position: relative; /* Promijenjeno iz fixed */
+            position: relative;
             width: 100%;
-            margin-top: 40px; /* Dodavanje razmaka od sadržaja */
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -113,18 +124,30 @@
         .image-container {
             text-align: center;
             margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
         }
     
         .image-container img {
             max-width: 100%;
-            height: auto;
+            height: 100%;
             border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        .image-container img.active {
+            opacity: 1;
         }
     
         .places {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Centriranje sekcija */
+            justify-content: center;
             padding: 20px;
             margin-top: 60px;
         }
@@ -134,9 +157,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 10px;
             padding: 15px;
-            width: calc(50% - 20px); /* Dva stupca na većim ekranima */
+            width: calc(50% - 20px);
             border-radius: 5px;
-            text-align: center; /* Centriranje teksta */
+            text-align: center;
         }
     
         .place img {
@@ -147,7 +170,7 @@
         .place-title {
             margin-top: 10px;
             font-size: 1.2em;
-            color: #000; /* Crna boja za naslov mjesta */
+            color: #000;
         }
     
         .place-description {
@@ -157,8 +180,8 @@
         /* Stil za male logotipe u ćoškovima */
         .logo {
             position: absolute;
-            width: 40px; /* Smanjena veličina slike */
-            height: 40px; /* Smanjena veličina slike */
+            width: 40px;
+            height: 40px;
             z-index: 10;
         }
     
@@ -186,56 +209,51 @@
         .sports .btn {
             display: block;
             margin: 0 auto;
-            width: 50%; /* Adjust as needed */
+            width: 50%;
         }
     
         .header-background {
-    background-image: url('razdego2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px 0;
-    height: 400px; /* Prilagodite visinu prema potrebi */
-}
-
-@media only screen and (max-width: 600px) {
-    .header-background {
-        height: 200px; /* Prilagodite visinu za mobilne uređaje */
-    }
-}
-
-
+            background-image: url('razdego2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px 0;
+            height: 400px;
+        }
+    
+        @media only screen and (max-width: 600px) {
+            .header-background {
+                height: 200px;
+            }
+        }
     
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
             .title {
-                font-size: 2rem; /* Prilagodba veličine naslova za mobilne uređaje */
+                font-size: 2rem;
             }
     
             .btn {
-                padding: 8px 16px; /* Prilagodba veličine dugmadi za mobilne uređaje */
+                padding: 8px 16px;
             }
     
             .place {
-                width: calc(100% - 20px); /* Jedan stupac na manjim ekranima */
+                width: calc(100% - 20px);
             }
     
-            /* Centriranje dugmeta ispod naslova "Sportske aktivnosti" */
             .sports .btn {
                 display: block;
                 margin: 0 auto;
-                width: 50%; /* Adjust as needed */
+                width: 50%;
             }
         }
     </style>
-    
 </head>
 
 <body>
     <header class="header-background">
-        <h1 class="title">TOURIST GUIDE Goražde</h1>
+        <h1 class="title">VISIT Goražde</h1>
     </header>
-    
 
     <main>
         <section class="flags">
@@ -244,6 +262,11 @@
 
         <section class="activities">
             <h2 class="subtitle">Šta posjetiti?</h2>
+            <div class="image-container">
+                <img src="img1.png" alt="Slika 1" class="active">
+                <img src="img2.png" alt="Slika 2">
+                <img src="img3.png" alt="Slika 3">
+            </div>
             <p>
                 Ovdje dodati uvodni text o Goraždu.
             </p>
@@ -252,6 +275,11 @@
 
         <section class="out">
             <h2 class="subtitle">Gdje prespavati?</h2>
+            <div class="image-container">
+                <img src="img4.png" alt="Slika 1" class="active">
+                <img src="img5.png" alt="Slika 2">
+                <img src="img6.png" alt="Slika 3">
+            </div>
             <p>
                 Text o prenoćištu u Goraždu
             </p>
@@ -260,6 +288,11 @@
 
         <section class="shopping">
             <h2 class="subtitle">Šoping</h2>
+            <div class="image-container">
+                <img src="img7.png" alt="Slika 1" class="active">
+                <img src="img8.png" alt="Slika 2">
+                <img src="img9.png" alt="Slika 3">
+            </div>
             <p>
                 Text o šopingu u Goraždu.
             </p>
@@ -268,6 +301,11 @@
 
         <section class="eat">
             <h2 class="subtitle">Šta jesti?</h2>
+            <div class="image-container">
+                <img src="img10.png" alt="Slika 1" class="active">
+                <img src="img11.png" alt="Slika 2">
+                <img src="img12.png" alt="Slika 3">
+            </div>
             <p>
                 Text za restorane u Goraždu.
             </p>
@@ -276,6 +314,11 @@
 
         <section class="outings">
             <h2 class="subtitle">Gdje izlaziti?</h2>
+            <div class="image-container">
+                <img src="img13.png" alt="Slika 1" class="active">
+                <img src="img14.png" alt="Slika 2">
+                <img src="img15.png" alt="Slika 3">
+            </div>
             <p>
                 Text o kafićima u Goraždu.
             </p>
@@ -284,6 +327,11 @@
         
         <section class="sports">
             <h2 class="subtitle">Sportske aktivnosti</h2>
+            <div class="image-container">
+                <img src="img16.png" alt="Slika 1" class="active">
+                <img src="img17.png" alt="Slika 2">
+                <img src="img18.png" alt="Slika 3">
+            </div>
             <p>
                 Text o sportskim aktivnostima u Goraždu.
             </p>
@@ -292,6 +340,11 @@
 
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
+            <div class="image-container">
+                <img src="img19.png" alt="Slika 1" class="active">
+                <img src="img20.png" alt="Slika 2">
+                <img src="img21.png" alt="Slika 3">
+            </div>
             <p>
                 Text o događajima
             </p>
@@ -303,6 +356,18 @@
         <p>&copy; 2024 - Goražde</p>
     </footer>
 
+    <script>
+        const images = document.querySelectorAll('.image-container img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
 </body>
 
 </html>
