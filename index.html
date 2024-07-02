@@ -7,25 +7,19 @@
     <title>VISIT Goražde</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Resetiranje stilova */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Osnovni stil tijela i fonta */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background-color: #f0f0f0;
             color: #333;
-            margin: 0;
-            padding: 0;
-            position: relative;
         }
 
-        /* Header */
         header {
             position: relative;
             height: 400px;
@@ -36,7 +30,6 @@
             text-align: center;
         }
 
-        /* Video kao pozadina */
         .header-video {
             position: absolute;
             top: 0;
@@ -47,7 +40,6 @@
             z-index: 1;
         }
 
-        /* Naslov */
         .title {
             font-size: 3rem;
             text-transform: uppercase;
@@ -57,8 +49,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 2;
-            display: inline-block;
-            text-align: center;
             color: transparent;
             background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
             background-size: 200%;
@@ -77,7 +67,6 @@
             }
         }
 
-        /* Stil podnaslova */
         .subtitle {
             color: #ff4500;
             font-size: 1.5rem;
@@ -89,7 +78,6 @@
             text-align: center;
         }
 
-        /* Opći stil paragrafa */
         p {
             font-size: 1rem;
             line-height: 1.8;
@@ -98,7 +86,6 @@
             text-align: center;
         }
 
-        /* Stiliranje dugmadi */
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -110,7 +97,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 10px;
+            margin: 10px auto;
             font-size: 1rem;
             font-family: 'Arial Black', sans-serif;
             text-align: center;
@@ -120,7 +107,6 @@
             background-color: #45a049;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             background-color: #333;
@@ -134,7 +120,6 @@
             align-items: center;
         }
 
-        /* Dodatni stilovi */
         .image-container {
             text-align: center;
             margin-bottom: 20px;
@@ -201,7 +186,6 @@
             color: #666;
         }
 
-        /* Stil za male logotipe u ćoškovima */
         .logo {
             position: absolute;
             width: 40px;
@@ -229,7 +213,6 @@
             right: 0;
         }
 
-        /* Centriranje dugmeta ispod naslova "Sportske aktivnosti" */
         .sports .btn {
             display: block;
             margin: 0 auto;
@@ -310,69 +293,75 @@
             <h2 class="subtitle">Gdje šopingovati?</h2>
             <div class="image-container">
                 <img src="bingo.jpg" alt="Slika 1" class="active">
-                <img src="trznica.jpg" alt="Slika 2">
+                <img src="konzum.jpg" alt="Slika 2">
+                <img src="robot.jpg" alt="Slika 3">
+                <img src="mall.jpg" alt="Slika 4">
             </div>
             <p>Nabavite sve što vam je potrebno.</p>
-            <a href="#" class="btn">Otkrij više</a>
+            <a href="#" class="btn">Šoping opcije</a>
         </section>
 
         <section class="eat">
             <h2 class="subtitle">Gdje jesti?</h2>
             <div class="image-container">
-                <img src="sejo.jpg" alt="Slika 1" class="active">
-                <img src="sejo2.jpg" alt="Slika 2">
-                <img src="sejo3.jpg" alt="Slika 3">
+                <img src="restoran1.jpg" alt="Slika 1" class="active">
+                <img src="restoran2.jpg" alt="Slika 2">
+                <img src="restoran3.jpg" alt="Slika 3">
+                <img src="restoran4.jpg" alt="Slika 4">
             </div>
-            <p>Uživajte u lokalnim specijalitetima.</p>
+            <p>Otkrijte najbolja mjesta za jelo u Goraždu.</p>
             <a href="#" class="btn">Pogledaj restorane</a>
         </section>
 
         <section class="outings">
-            <h2 class="subtitle">Izleti</h2>
+            <h2 class="subtitle">Izleti i aktivnosti</h2>
             <div class="image-container">
-                <img src="piknik.jpg" alt="Slika 1" class="active">
-                <img src="vodopad.jpg" alt="Slika 2">
-                <img src="planina.jpg" alt="Slika 3">
+                <img src="izlet1.jpg" alt="Slika 1" class="active">
+                <img src="izlet2.jpg" alt="Slika 2">
+                <img src="izlet3.jpg" alt="Slika 3">
+                <img src="izlet4.jpg" alt="Slika 4">
             </div>
-            <p>Uživajte u prirodi.</p>
+            <p>Organizujte izlete i aktivnosti na otvorenom.</p>
             <a href="#" class="btn">Saznaj više</a>
         </section>
 
         <section class="sports">
             <h2 class="subtitle">Sportske aktivnosti</h2>
             <div class="image-container">
-                <img src="rafting.jpg" alt="Slika 1" class="active">
-                <img src="skijanje.jpg" alt="Slika 2">
-                <img src="bicikla.jpg" alt="Slika 3">
+                <img src="sport1.jpg" alt="Slika 1" class="active">
+                <img src="sport2.jpg" alt="Slika 2">
+                <img src="sport3.jpg" alt="Slika 3">
+                <img src="sport4.jpg" alt="Slika 4">
             </div>
-            <p>Pronađite sport koji vam odgovara.</p>
-            <a href="#" class="btn">Otkrij aktivnosti</a>
+            <p>Uključite se u sportske aktivnosti.</p>
+            <a href="#" class="btn">Više o sportovima</a>
         </section>
 
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
             <div class="image-container">
-                <img src="festival.jpg" alt="Slika 1" class="active">
-                <img src="koncert.jpg" alt="Slika 2">
+                <img src="dogadjaj1.jpg" alt="Slika 1" class="active">
+                <img src="dogadjaj2.jpg" alt="Slika 2">
+                <img src="dogadjaj3.jpg" alt="Slika 3">
+                <img src="dogadjaj4.jpg" alt="Slika 4">
             </div>
-            <p>Pratite najnovije događaje.</p>
-            <a href="#" class="btn">Vidi kalendar</a>
+            <p>Pratite aktuelne događaje u Goraždu.</p>
+            <a href="#" class="btn">Saznaj više</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Visit Gorazde. All rights reserved.</p>
+        <p>&copy; 2024 Visit Goražde. All rights reserved.</p>
     </footer>
 
     <script>
-        // Automatska izmjena slika
         const images = document.querySelectorAll('.image-container img');
-        let currentIndex = 0;
+        let currentImageIndex = 0;
 
         function changeImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
         }
 
         setInterval(changeImage, 3000);
