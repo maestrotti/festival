@@ -42,18 +42,14 @@
             margin-bottom: 10px;
             font-family: 'Georgia', serif;
             color: #ffd700;
-            padding: 10px 20px;
-            border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 2;
             display: inline-block;
             text-align: center;
-            background: linear-gradient(to right, #ffd700 20%, #fff 40%, #ffd700 60%);
-            background-size: 200% auto;
             animation: shimmer 3s linear infinite;
         }
-
+    
         @keyframes shimmer {
             0% {
                 background-position: 200% center;
@@ -248,6 +244,7 @@
             }
         }
     </style>
+    
 </head>
 
 <body>
@@ -256,38 +253,36 @@
     </header>
 
     <main>
-        <section class="flags">
-            <!-- Sekcija sa zastavama -->
-        </section>
-
+      
         <section class="activities">
             <h2 class="subtitle">Šta posjetiti?</h2>
             <div class="image-container">
                 <img src="zanj.png" alt="Slika 1" class="active">
                 <img src="gubavica.webp" alt="Slika 2">
                 <img src="rimski.png" alt="Slika 3">
-                <img src="turbe.png" alt="Slika 1" class="active">
-                <img src="zupcici.jpg" alt="Slika 2">
-                <img src="omladinska.jpeg" alt="Slika 3">
-                <img src="sadba.jpg" alt="Slika 1" class="active">
-                <img src="sejo.jpg" alt="Slika 2">
-                <img src="gorazde.jpg" alt="Slika 1" class="active">
-                <img src="razdego.jpg" alt="Slika 2">
-                <img src="razdego3.jpg" alt="Slika 3">
-                <img src="somobor.jpg" alt="Slika 3">
-                <img src="stecci.png" alt="Slika 1" class="active">
-                <img src="djozo.jpg" alt="Slika 2">
-                <img src="drinske.jpg" alt="Slika 3">
-                <img src="galerija.jpg" alt="Slika 1" class="active">
-                <img src="basa.jpg" alt="Slika 2">
-                <img src="bijelevode.jpg" alt="Slika 3">
-                <img src="mostispodmosta.jpeg" alt="Slika 1" class="active">
-                <img src="mucenice.jpeg" alt="Slika 2">
-                <img src="gorazde.jpg" alt="Slika 3">
+                <img src="turbe.png" alt="Slika 4">
+                <img src="zupcici.jpg" alt="Slika 5">
+                <img src="omladinska.jpeg" alt="Slika 6">
+                <img src="sadba.jpg" alt="Slika 7">
+                <img src="sejo.jpg" alt="Slika 8">
+                <img src="gorazde.jpg" alt="Slika 9">
+                <img src="razdego.jpg" alt="Slika 10">
+                <img src="razdego3.jpg" alt="Slika 11">
+                <img src="somobor.jpg" alt="Slika 12">
+                <img src="stecci.png" alt="Slika 13">
+                <img src="djozo.jpg" alt="Slika 14">
+                <img src="drinske.jpg" alt="Slika 15">
+                <img src="galerija.jpg" alt="Slika 16">
+                <img src="basa.jpg" alt="Slika 17">
+                <img src="bijelevode.jpg" alt="Slika 18">
+                <img src="mostispodmosta.jpeg" alt="Slika 19">
+                <img src="mucenice.jpeg" alt="Slika 20">
+                <img src="gorazde.jpg" alt="Slika 21">
             </div>
-            <p>
-                Ovdje dodati uvodni text o Goraždu.
-            </p>
+            <p>Ovdje dodati uvodni text o Goraždu.</p>
+        </section>
+        
+        
             <a href="visit.html" class="btn">Saznaj više</a>
         </section>
 
@@ -375,17 +370,18 @@
     </footer>
 
     <script>
-        const images = document.querySelectorAll('.image-container img');
-        let currentIndex = 0;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
+        const activitiesImages = document.querySelectorAll('.activities .image-container img');
+        let currentActivityIndex = 0;
+    
+        function showNextActivityImage() {
+            activitiesImages[currentActivityIndex].classList.remove('active');
+            currentActivityIndex = (currentActivityIndex + 1) % activitiesImages.length;
+            activitiesImages[currentActivityIndex].classList.add('active');
         }
-
-        setInterval(showNextImage, 3000);
+    
+        setInterval(showNextActivityImage, 2000); // Slike se mijenjaju svake 2 sekunde
     </script>
+    
 </body>
 
 </html>
