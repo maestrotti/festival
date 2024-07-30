@@ -241,6 +241,22 @@
                 <img src="rimski.png" alt="Slika 3">
                 <img src="turbe.png" alt="Slika 4">
                 <img src="zupcici.jpg" alt="Slika 5">
+                <img src="omladinska.jpeg" alt="Slika 6">
+                <img src="sadba.jpg" alt="Slika 7">
+                <img src="sejo.jpg" alt="Slika 8">
+                <img src="gorazde.jpg" alt="Slika 9">
+                <img src="razdego.jpg" alt="Slika 10">
+                <img src="razdego3.jpg" alt="Slika 11">
+                <img src="somobor.jpg" alt="Slika 12">
+                <img src="stecci.png" alt="Slika 13">
+                <img src="djozo.jpg" alt="Slika 14">
+                <img src="drinske.jpg" alt="Slika 15">
+                <img src="galerija.jpg" alt="Slika 16">
+                <img src="basa.jpg" alt="Slika 17">
+                <img src="bijelevode.jpg" alt="Slika 18">
+                <img src="mostispodmosta.jpeg" alt="Slika 19">
+                <img src="mucenice.jpeg" alt="Slika 20">
+                <img src="gorazde.jpg" alt="Slika 21">
             </div>
             <p>Ovdje dodati uvodni tekst o Goraždu.</p>
             <a href="visit.html" class="btn">Saznaj više</a>
@@ -281,6 +297,8 @@
             <div class="image-container">
                 <img src="san.jpeg" alt="Slika 1" class="active">
                 <img src="art.jpeg" alt="Slika 2">
+                <img src="bumerang.png" alt="Slika 3">
+                <img src="carpe.png" alt="Slika 4">
             </div>
             <p>Tekst o izlascima</p>
             <a href="outings.html" class="btn">Saznaj više</a>
@@ -289,41 +307,44 @@
         <section class="sports">
             <h2 class="subtitle">Sportske aktivnosti</h2>
             <div class="image-container">
-                <img src="biciklizam.jpg" alt="Slika 1" class="active">
-                <img src="rafting.jpg" alt="Slika 2">
+                <img src="fudbal.jpg" alt="Slika 1" class="active">
+                <img src="tenis.jpg" alt="Slika 2">
+                <img src="odbojka.jpg" alt="Slika 3">
+                <img src="bicikl.jpeg" alt="Slika 4">
             </div>
-            <p>Tekst o sportskim aktivnostima.</p>
+            <p>Tekst o sportskim aktivnostima u Goraždu.</p>
             <a href="sports.html" class="btn">Saznaj više</a>
         </section>
 
         <section class="events">
             <h2 class="subtitle">Događaji</h2>
             <div class="image-container">
-                <img src="sac.jpeg" alt="Slika 1" class="active">
-                <img src="festival.jpeg" alt="Slika 2">
+                <img src="fest.png" alt="Slika 1" class="active">
+                <img src="regata.jpg" alt="Slika 2">
             </div>
             <p>Tekst o događajima u Goraždu.</p>
             <a href="events.html" class="btn">Saznaj više</a>
         </section>
-
-        <footer>
-            <p>&copy; 2024 Visit Goražde</p>
-        </footer>
     </main>
 
+    <footer>
+        <p>&copy; 2024 Visit Goražde. All rights reserved.</p>
+    </footer>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const imageContainers = document.querySelectorAll(".image-container");
-
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.image-container');
             imageContainers.forEach(container => {
-                const images = container.querySelectorAll("img");
-                let currentIndex = 0;
+                const images = container.querySelectorAll('img');
+                let currentImageIndex = 0;
 
-                setInterval(() => {
-                    images[currentIndex].classList.remove("active");
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].classList.add("active");
-                }, 3000);
+                function changeImage() {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+
+                setInterval(changeImage, 3000);
             });
         });
     </script>
